@@ -4,9 +4,10 @@
     <div class="card">
       <h2><%= yurt.title %></h2>
       <div id="yurt-info">
-        Max capacity: <%= yurt.max_capacity %>
-        Location: <%= yurt.location %>
-        Day rate: £<%= yurt.day_rate %>
-      </div>
+        <ul>
+          <li>Max capacity: <%= yurt.max_capacity %></li>
+          <li>Location: <%= yurt.location %></li>
+          <li>Day rate: £<%= yurt.day_rate %></li>
+        </ul>
     </div>
   <% end %>
