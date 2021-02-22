@@ -1,0 +1,11 @@
+<div class="booking-page">
+  <h1>Your booking</h1>
+  <h2><%= @booking.yurt.title %></h2>
+  <p><%= @booking.yurt.description %></p>
+  <p>Location: <%= @booking.yurt.location %></p>
+  <p>Max capacity: <%=@booking.yurt.max_capacity  %></p>
+  <p>Dates: <%= @booking.booked_from %> - <%= @booking.booked_to %></p>
+  <p>Total cost: <%= @booking.total_cost %></p>
+
+  <p><%= link_to 'Back', bookings_path %></p>
+</div>
