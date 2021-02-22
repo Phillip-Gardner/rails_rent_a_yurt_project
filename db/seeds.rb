@@ -7,7 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# Yurt.create!(title:"Teepee", description: "A great TeePee", max_capacity: 10, location:"Suffolk", day_rate:"55")
+User.create!(email:"joetipee@gmail.com", password: "123456")
+
+Yurt.create!(title:"Teepee", description: "A great TeePee", max_capacity: 10, location:"Suffolk", day_rate:"55", user_id:1)
+
+
 
 # Yurt.create!(title:"Wedding Marque", description: "Brilliant for getting married", max_capacity: 100, location:"Kent", day_rate:"280")
 
