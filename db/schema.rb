@@ -10,9 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_02_22_143419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookings", force: :cascade do |t|
+    t.date "booked_from"
+    t.date "booked_to"
+    t.integer "total_cost"
+    t.bigint "user_id", null: false
+    t.bigint "yurt_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.index ["yurt_id"], name: "index_bookings_on_yurt_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "yurts", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.integer "max_capacity"
+    t.string "location"
+    t.integer "day_rate"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_yurts_on_user_id"
+  end
+
+  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "yurts"
+  add_foreign_key "yurts", "users"
 end
