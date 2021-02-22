@@ -20,7 +20,7 @@ class YurtsController < ApplicationController
     @yurt.user = current_user
     @yurt.save
     if @yurt.save
-      redirect_to yurts_path
+      redirect_to yurt_path(@yurt)
     else
       render :new
     end
