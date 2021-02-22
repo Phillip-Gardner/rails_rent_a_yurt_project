@@ -1,10 +1,12 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>Rent a Yurt</h1>
+    <p>Experience the best Yurts in the world</p>
+    <button type="button" class="btn btn-light"><%= link_to 'Yurts', yurts_path %></button>
+    <button type="button" class="btn btn-light"><%= link_to 'bookings', bookings_path %></button>
+    <button type="button" class="btn btn-light"><%= link_to 'users sign in', new_user_session_path %></button>
+    <button type="button" class="btn btn-light"><%= link_to 'new yurt', new_yurt_path %></button>
+  </div>
+</div>
 
-<%= link_to 'Yurts', yurts_path %>
-<br>
-<%= link_to 'bookings', bookings_path %>
-<br>
-<%= link_to 'users sign in', new_user_session_path %>
-<br>
-<%= link_to 'new yurt', new_yurt_path %>
+

@@ -8,7 +8,7 @@
             <li><%= booking.yurt.description %></li>
             <li><%= booking.booked_from %> - <%= booking.booked_to %></li>
           </ul>
-
+          <p><%= link_to 'View booking details', booking_path(booking.id) %></p>
         <% end %>
       </div>
   </div>
