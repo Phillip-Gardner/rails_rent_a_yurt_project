@@ -6,9 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+new_user = User.create(email: 'email@email.com', password: 'Password1')
 
-# Yurt.create!(title:"Teepee", description: "A great TeePee", max_capacity: 10, location:"Suffolk", day_rate:"55")
+new_yurt1 = Yurt.new(title:"Teepee", description: "A great TeePee", max_capacity: 10, location:"Suffolk", day_rate:"55")
+new_yurt1.user = new_user
+new_yurt1.save
 
-# Yurt.create!(title:"Wedding Marque", description: "Brilliant for getting married", max_capacity: 100, location:"Kent", day_rate:"280")
+new_yurt2 = Yurt.new(title:"Wedding Marque", description: "Brilliant for getting married", max_capacity: 100, location:"Kent", day_rate:"2800")
+new_yurt2.user = new_user
+new_yurt2.save
 
-# Yurt.create!(title:"Kurt's Yurt", description: "My old yurt", max_capacity: 4, location:"Devon", day_rate:"5")
+new_yurt3 = Yurt.new(title:"Kurt's Yurt", description: "My old yurt", max_capacity: 4, location:"Devon", day_rate:"5")
+new_yurt3.user = new_user
+new_yurt3.save
