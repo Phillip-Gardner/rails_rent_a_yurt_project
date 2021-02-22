@@ -1,0 +1,12 @@
+  <div class="row">
+    <% @yurts.each do |yurt| %>
+      <div class="card col-lg-6">
+        <h2><%= yurt.title %></h2>
+          <ul id="yurt-info">
+            <li>Max capacity: <%= yurt.max_capacity %></li>
+            <li>Location: <%= yurt.location %></li>
+            <li>Day rate: £<%= yurt.day_rate %></li>
+          </ul>
+      </div>
+    <% end %>
+</div>
