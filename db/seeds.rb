@@ -8,9 +8,13 @@
 
 new_user = User.create(email: 'email@email.com', password: 'Password1')
 
+
+# Yurt.create!(title:"Teepee", description: "A great TeePee", max_capacity: 10, location:"Suffolk", day_rate:"55")
+
 new_yurt1 = Yurt.new(title:"Teepee", description: "A great TeePee", max_capacity: 10, location:"Suffolk", day_rate:"55")
 new_yurt1.user = new_user
 new_yurt1.save
+
 
 new_yurt2 = Yurt.new(title:"Wedding Marque", description: "Brilliant for getting married", max_capacity: 100, location:"Kent", day_rate:"2800")
 new_yurt2.user = new_user

@@ -1,0 +1,17 @@
+<div class="bookings">
+  <h1>Your Bookings:</h1>
+    <div class="row">
+      <div class="col-sm-12">
+        <% @bookings.each do |booking| %>
+          <h2><%= booking.yurt.title %></h2>
+          <ul>
+            <li><%= booking.yurt.description %></li>
+            <li><%= booking.booked_from %> - <%= booking.booked_to %></li>
+          </ul>
+
+        <% end %>
+      </div>
+  </div>
+</div>
+
+
