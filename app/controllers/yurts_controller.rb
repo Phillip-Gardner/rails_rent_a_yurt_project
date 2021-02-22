@@ -1,6 +1,5 @@
 class YurtsController < ApplicationController
-  
-skip_before_action :authenticate_user!, only: [ :index, :show ]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @yurts = Yurt.all
@@ -8,5 +7,9 @@ skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def show
     @yurt = Yurt.find(params[:id])
+  end
+
+  def new
+    @yurt = Yurt.new
   end
 end
