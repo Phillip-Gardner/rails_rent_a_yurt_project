@@ -1,9 +1,8 @@
 <div class="container">
   <h1>Your Bookings:</h1>
   <div class="row">
-
       <div class="col-sm-6">
-        <% @bookings.each do |booking| %>
+        <%@ bookings.each do |booking| %>
         <ul>
           <li>
             <%= booking.yurt.title %>
