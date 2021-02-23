@@ -1,6 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="card">
+      <div id="yurt-image">
+        <% if @yurt.photo.attached? %>
+          <%= cl_image_tag @yurt.photo.key, height: 300, width: 400, crop: :fill %>
+        <% else %>
+          <p>No image attached</p>
+        <% end %>
+      </div>
       <h2><%= @yurt.title %></h2>
       <%= link_to edit_yurt_path @yurt do %>
         <i class="fas fa-edit"></i>
