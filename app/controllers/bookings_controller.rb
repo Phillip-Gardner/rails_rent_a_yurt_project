@@ -26,8 +26,6 @@ before_action :find_yurt, only: [:index, :create, :new]
     end
   end
 
-end
-
 private
 
 def booking_params
@@ -43,4 +41,4 @@ def find_booking
 end
 
 
-
+end
