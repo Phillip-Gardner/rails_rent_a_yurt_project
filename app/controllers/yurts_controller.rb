@@ -18,7 +18,6 @@ class YurtsController < ApplicationController
   def create
     @yurt = Yurt.new(yurt_params)
     @yurt.user = current_user
-    @yurt.save
     if @yurt.save
       redirect_to yurt_path(@yurt)
     else
