@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
 
   def update
     @booking.update(booking_params)
-    redirect_to booking_path(@booking.id)
+    redirect_to booking_path(@booking.id), alert: "Update successful"
   end
 
   def new
@@ -27,9 +27,9 @@ class BookingsController < ApplicationController
     @booking.yurt = @yurt
     @booking.user = current_user
     if @booking.save
-      redirect_to booking_path(@booking.id)
+      redirect_to booking_path(@booking.id), alert: "Booking successful"
     else
-      redirect_to yurt_path(@yurt.id)
+      redirect_to yurt_path(@yurt.id), alert: "Booking failed"
     end
   end
 
