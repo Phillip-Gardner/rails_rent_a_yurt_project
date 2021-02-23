@@ -18,6 +18,7 @@ before_action :find_yurt, only: [:index, :create, :new]
     @booking = Booking.new(booking_params)
     @yurt = Yurt.find(params[:yurt_id])
     @booking.yurt = @yurt
+    @booking.user = current_user
     if @booking.save
       redirect_to booking_path(@booking.id)
     else
