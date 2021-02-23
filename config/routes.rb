@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :yurts do
     resources :bookings, only: [:index, :new, :create]
   end
-  resources :bookings, only: [:show]
+  resources :bookings, only: [:show, :index]
 end
