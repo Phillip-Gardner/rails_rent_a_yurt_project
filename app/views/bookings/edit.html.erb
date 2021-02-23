@@ -1,0 +1,12 @@
+<div class="edit-booking-page">
+  <h1>Edit Your booking</h1>
+  <br>
+<%= form_for(@booking) do |f| %>
+  <%= f.label :booked_from %>
+  <%= f.text_field :booked_from %>
+  <%= f.label :booked_to %>
+  <%= f.text_field :booked_to %>
+  <%= f.submit %>
+<% end %>
+  <p><%= link_to 'Back', bookings_path %></p>
+</div>
