@@ -17,6 +17,13 @@
   <% else %>
     <% @yurts.each do |yurt| %>
       <div class="card col-lg-6">
+        <div id="yurt-image">
+          <% if yurt.photo.attached? %>
+            <%= cl_image_tag yurt.photo.key, height: 300, width: 400, crop: :fill %>
+          <% else %>
+            <p>No image attached</p>
+          <% end %>
+        </div>
         <%= link_to yurt_path(yurt.id), target: "_blank" do %>
           <h2><%= yurt.title %></h2>
         <% end %>
