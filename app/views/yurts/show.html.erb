@@ -1,10 +1,20 @@
-<div>
-  <h2><%= @yurt.title %></h2>
-  <p><%= @yurt.description %></p>
-  <p><%= @yurt.max_capacity %></p>
-  <p><%= @yurt.location %></p>
-  <p><%= @yurt.day_rate %></p>
-
-  <p><%= link_to 'delete', yurt_path(@yurt.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-  <p><%= link_to 'Back', yurts_path %></p>
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <h2><%= @yurt.title %></h2>
+      <%= link_to edit_yurt_path @yurt do %>
+        <i class="fas fa-edit"></i>
+      <% end %>
+      <%= link_to 'delete', yurt_path(@yurt.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <div id="yurt-info">
+        <h4><%= @yurt.description %></h4>
+        <p>Max Capacity: <%= @yurt.max_capacity %></p>
+        <p>Location: <%= @yurt.location %></p>
+        <p>Day rate: <%= @yurt.day_rate %></p>
+        <p>Host: <%= @yurt.user.email %></p>
+      </div>
+    </div>
+    <p><%= link_to 'Back', yurts_path %></p>
+  </div>
 </div>
+

@@ -23,6 +23,20 @@ class YurtsController < ApplicationController
     end
   end
 
+  def edit
+    @yurt = Yurt.find(params[:id])
+  end
+
+  def update
+    @yurt = Yurt.find(params[:id])
+    @yurt.update(yurt_params)
+    if @yurt.save
+      redirect_to yurt_path
+    else
+      render :new
+    end
+  end
+
   def destroy
     @yurt.destroy
     redirect_to yurts_path, alert: "Deletion successful - Yurt deleted"
