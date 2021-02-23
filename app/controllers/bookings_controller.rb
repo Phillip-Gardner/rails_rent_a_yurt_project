@@ -7,4 +7,10 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
+  def new
+    @booking = Booking.new
+    @yurt = Yurt.find(params[:id])
+  end
+
 end
+
