@@ -1,0 +1,13 @@
+<div class="container">
+  <%= render "form", booking: @booking, yurt: @yurt %>
+
+  <p>Price per night: £<%= @yurt.day_rate %></p>
+
+  <h3>Total cost:</h3>
+  <%= link_to 'Go back to yurt', yurt_path(@yurt) %>
+
+</div>
+
+
+
+

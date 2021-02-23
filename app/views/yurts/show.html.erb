@@ -4,6 +4,6 @@
   <p><%= @yurt.max_capacity %></p>
   <p><%= @yurt.location %></p>
   <p><%= @yurt.day_rate %></p>
-
+  <p><%= link_to 'Book this yurt', new_yurt_booking_path(@yurt) %></p>
   <p><%= link_to 'Back', yurts_path %></p>
 </div>
