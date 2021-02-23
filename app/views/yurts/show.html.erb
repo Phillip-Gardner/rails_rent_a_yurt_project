@@ -5,6 +5,7 @@
       <%= link_to edit_yurt_path @yurt do %>
         <i class="fas fa-edit"></i>
       <% end %>
+      <%= link_to 'delete', yurt_path(@yurt.id), method: :delete, data: { confirm: 'Are you sure?' } %>
       <div id="yurt-info">
         <h4><%= @yurt.description %></h4>
         <p>Max Capacity: <%= @yurt.max_capacity %></p>
