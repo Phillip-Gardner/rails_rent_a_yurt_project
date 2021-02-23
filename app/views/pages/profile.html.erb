@@ -1,0 +1,25 @@
+<h1>Your profile</h1>
+
+<h2>Your details</h2>
+
+<h2>Your Yurts</h2>
+
+<div class="row">
+  <% if @yurts.nil? %>
+    <p>You don't have any yurts.</p>
+    <%= link_to 'Add a yurt', new_yurt  %>
+  <% else %>
+    <% @yurts.each do |yurt| %>
+      <div class="card col-lg-6">
+        <%= link_to yurt_path(yurt.id) do %>
+          <h2><%= yurt.title %></h2>
+        <% end %>
+        <ul id="yurt-info">
+          <li>Max capacity: <%= yurt.max_capacity %></li>
+          <li>Location: <%= yurt.location %></li>
+          <li>Day rate: £<%= yurt.day_rate %></li>
+        </ul>
+      </div>
+    <% end %>
+  <% end %>
+</div>
