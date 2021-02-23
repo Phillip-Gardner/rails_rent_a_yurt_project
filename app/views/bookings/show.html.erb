@@ -7,5 +7,5 @@
   <p>Dates: <%= @booking.booked_from %> - <%= @booking.booked_to %></p>
   <p>Total cost: <%= @booking.total_cost %></p>
 
-  <p><%= link_to 'Back', bookings_path %></p>
+  <p><%= link_to 'Back', yurt_path(@booking.yurt_id) %></p>
 </div>
