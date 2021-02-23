@@ -1,6 +1,5 @@
-  <%= simple_form_for [@yurt, @bookings] do |f| %>
-    <%= f.input :booked_from %>
-    <%= f.input :booked_to %>
-    <%= f.input :guests %>
-    <%= f.submit %>
-  <% end %>
+<%= simple_form_for [@yurt, @booking] do |f| %>
+  <%= f.input :booked_from, as: :date, html5: true %>
+  <%= f.input :booked_to, as: :date, html5: true %>
+  <%= f.submit %>
+ <% end %>
