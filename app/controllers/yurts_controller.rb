@@ -28,7 +28,7 @@ class YurtsController < ApplicationController
   def destroy
     @yurt = Yurt.find(params[:id])
     @yurt.destroy
-    redirect_to yurt_path(@yurt)
+    redirect_to yurts_path
   end
 
   private
