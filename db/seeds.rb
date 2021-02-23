@@ -8,6 +8,8 @@
 
 new_user = User.create(email: 'email@email.com', password: 'Password1')
 
+new_booking = Booking.create(booked_from: '28/07/2021', booked_to: '29/07/2021', total_cost: '250', user_id: 1, yurt_id: 1)
+
 
 # Yurt.create!(title:"Teepee", description: "A great TeePee", max_capacity: 10, location:"Suffolk", day_rate:"55")
 
@@ -23,3 +25,4 @@ new_yurt2.save
 new_yurt3 = Yurt.new(title:"Kurt's Yurt", description: "My old yurt", max_capacity: 4, location:"Devon", day_rate:"5")
 new_yurt3.user = new_user
 new_yurt3.save
+
