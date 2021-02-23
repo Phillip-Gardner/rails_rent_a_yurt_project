@@ -1,8 +1,14 @@
 <h1>Your profile</h1>
 
-<h2>Your details</h2>
+<h3>Your details</h3>
 
-<h2>Your Yurts</h2>
+<ul>
+  <li>Email: <%= @user.email %></li>
+  <li>First name: <%= @user.first_name %></li>
+  <li>Last name: <%= @user.last_name %></li>
+</ul>
+
+<h3>Your Yurts</h3>
 
 <div class="row">
   <% if @yurts.nil? %>
