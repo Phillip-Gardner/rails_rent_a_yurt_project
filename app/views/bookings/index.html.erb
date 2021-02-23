@@ -9,6 +9,10 @@
             <li><%= booking.booked_from %> - <%= booking.booked_to %></li>
           </ul>
           <p><%= link_to 'View booking details', booking_path(booking.id) %></p>
+          <p><%= link_to "Delete",
+            booking_path(booking),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></p>
         <% end %>
       </div>
   </div>
