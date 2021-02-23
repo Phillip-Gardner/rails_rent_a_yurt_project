@@ -6,10 +6,10 @@
         <i class="fas fa-edit"></i>
       <% end %>
       <div id="yurt-info">
-        <p><%= @yurt.description %></p>
-        <p><%= @yurt.max_capacity %></p>
-        <p><%= @yurt.location %></p>
-        <p><%= @yurt.day_rate %></p>
+        <h4><%= @yurt.description %></h4>
+        <p>Max Capacity: <%= @yurt.max_capacity %></p>
+        <p>Location: <%= @yurt.location %></p>
+        <p>Day rate: <%= @yurt.day_rate %></p>
       </div>
     </div>
     <p><%= link_to 'Back', yurts_path %></p>
