@@ -17,7 +17,7 @@
   <% else %>
     <% @yurts.each do |yurt| %>
       <div class="card col-lg-6">
-        <%= link_to yurt_path(yurt.id) do %>
+        <%= link_to yurt_path(yurt.id), target: "_blank" do %>
           <h2><%= yurt.title %></h2>
         <% end %>
         <ul id="yurt-info">
@@ -28,4 +28,22 @@
       </div>
     <% end %>
   <% end %>
+</div>
+
+
+<h3>Your bookings</h3>
+
+<div class="bookings">
+    <div class="row">
+      <div class="col-sm-12">
+        <% @bookings.each do |booking| %>
+          <h2><%= booking.yurt.title %></h2>
+          <ul>
+            <li><%= booking.yurt.description %></li>
+            <li><%= booking.booked_from %> - <%= booking.booked_to %></li>
+          </ul>
+          <p><%= link_to 'View booking details', booking_path(booking.id) %></p>
+        <% end %>
+      </div>
+  </div>
 </div>
