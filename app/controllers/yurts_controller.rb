@@ -29,6 +29,6 @@ class YurtsController < ApplicationController
   private
 
   def yurt_params
-    params.require(:yurt).permit(:title, :description, :location, :max_capacity, :day_rate)
+    params.require(:yurt).permit(:title, :description, :location, :max_capacity, :day_rate, :photo)
   end
 end
