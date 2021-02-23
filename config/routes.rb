@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :yurts do
     resources :bookings, only: [:index, :new, :create]
   end
-  resources :bookings, only: [:show, :index]
+
+  resources :bookings, only: [:show, :index, :destroy]
 
   get '/profile', to: "pages#profile"
+
 end
