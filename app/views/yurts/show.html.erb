@@ -9,9 +9,9 @@
 <div id="yurt-info">
   <h2><%= @yurt.title %></h2>
   <p><%= @yurt.description %></p>
-  <p><%= @yurt.max_capacity %></p>
-  <p><%= @yurt.location %></p>
-  <p><%= @yurt.day_rate %></p>
+  <p>Max Capacity: <%= @yurt.max_capacity %></p>
+  <p>Location: <%= @yurt.location %></p>
+  <p>Day rate: <%= @yurt.day_rate %></p>
 
   <p><%= link_to 'Back', yurts_path %></p>
 </div>
