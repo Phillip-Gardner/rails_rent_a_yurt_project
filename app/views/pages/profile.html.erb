@@ -1,0 +1,60 @@
+<h1>Your profile</h1>
+
+<h3>Your details</h3>
+
+<%= link_to edit_user_registration_path do %>
+  <i class="fas fa-edit"></i>
+<% end %>
+
+<ul>
+  <li>Email: <%= @user.email %></li>
+  <li>First name: <%= @user.first_name %></li>
+  <li>Last name: <%= @user.last_name %></li>
+</ul>
+
+<h3>Your Yurts</h3>
+
+<div class="row">
+  <% if @yurts.nil? %>
+    <p>You don't have any yurts.</p>
+    <%= link_to 'Add a yurt', new_yurt  %>
+  <% else %>
+    <% @yurts.each do |yurt| %>
+      <div class="card col-lg-6">
+        <div id="yurt-image">
+          <% if yurt.photo.attached? %>
+            <%= cl_image_tag yurt.photo.key, height: 300, width: 400, crop: :fill %>
+          <% else %>
+            <p>No image attached</p>
+          <% end %>
+        </div>
+        <%= link_to yurt_path(yurt.id), target: "_blank" do %>
+          <h2><%= yurt.title %></h2>
+        <% end %>
+        <ul id="yurt-info">
+          <li>Max capacity: <%= yurt.max_capacity %></li>
+          <li>Location: <%= yurt.location %></li>
+          <li>Day rate: £<%= yurt.day_rate %></li>
+        </ul>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+
+<h3>Your bookings</h3>
+
+<div class="bookings">
+    <div class="row">
+      <div class="col-sm-12">
+        <% @bookings.each do |booking| %>
+          <h2><%= booking.yurt.title %></h2>
+          <ul>
+            <li><%= booking.yurt.description %></li>
+            <li><%= booking.booked_from %> - <%= booking.booked_to %></li>
+          </ul>
+          <p><%= link_to 'View booking details', booking_path(booking.id) %></p>
+        <% end %>
+      </div>
+  </div>
+</div>

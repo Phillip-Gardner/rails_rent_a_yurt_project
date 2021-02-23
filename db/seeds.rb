@@ -19,8 +19,8 @@ user3 = User.create(email: 'Kurt@gmail.com', password: 'Password!')
 user4 = User.create(email: 'yurt_owner@email.com', password: 'iloveyurts')
 user5 = User.create(email: 'email@yahoo.com', password: 'password1')
 
-new_yurt1 = Yurt.new(title:"Teepee", description: "A great TeePee", max_capacity: 10, location:"Suffolk", day_rate:"55")
-new_yurt1.user = new_user
+new_yurt1 = Yurt.new(title:"Teepee", description: "A great TeePee", max_capacity: 10, location:"Suffolk", day_rate:"55", user_id: 1)
+new_yurt.user = new_user
 new_yurt1.save
 
 new_yurt2 = Yurt.new(title:"Wedding Marque", description: "Brilliant for getting married", max_capacity: 100, location:"Kent", day_rate:"2800")
@@ -29,7 +29,6 @@ new_yurt2.save
 
 new_booking = Booking.create(booked_from: '28/07/2021', booked_to: '29/07/2021', total_cost: '250', user: user3, yurt: new_yurt2)
 new_booking = Booking.create(booked_from: '01/03/2021', booked_to: '10/03/2021', total_cost: '35', user: user5, yurt: new_yurt1)
-
 
 # puts "Destroy users"
 # User.destroy_all if Rails.env.development?
@@ -46,8 +45,6 @@ yurt_photos =
 yurt_filenames = ['4Yurt_qq7byn.jpgg', '3Yurt_mvbwzq.jpgg',
  '2Yurt_jrqjfy.jpg', '1Yurt_rblxqp.jpg', 'z8amus5p9g4don1sqet116gstp10.jpg']
 
-
-
 counter = 0
 5.times do
   # user_file = URI.open("#{user_photos[counter]}")
@@ -60,10 +57,3 @@ counter = 0
   yurt.save
   counter += 1
 end
-
-
-# Yurt.create!(title:"Teepee", description: "A great TeePee", max_capacity: 10, location:"Suffolk", day_rate:"55")
-
-# puts "#{User.all.count} users created"
-# puts "#{Yurt.all.count} yurts created"
-# puts "#{Booking.all.count} booking created"

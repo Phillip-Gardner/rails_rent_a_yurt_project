@@ -1,14 +1,32 @@
-<div class="row">
+<div class="container">
+  <div class="row align-items-center">
     <% @yurts.each do |yurt| %>
-      <div class="card col-lg-6">
-        <%= link_to yurt_path(yurt.id) do %>
-          <h2><%= yurt.title %></h2>
+    <div class="col-4">
+      <div class="card" style="width: 320px;">
+
+        <% if yurt.photo.attached? %>
+          <%= cl_image_tag yurt.photo.key, width: 240, height: 240, crop: :fill %>
+        <% else %>
+          <p>No image attached</p>
         <% end %>
-        <ul id="yurt-info">
-          <li>Max capacity: <%= yurt.max_capacity %></li>
-          <li>Location: <%= yurt.location %></li>
-          <li>Day rate: £<%= yurt.day_rate %></li>
+
+        <div class="card-body">
+          <h5 class="card-title"><%= yurt.title %></h5>
+          <p class="card-text"><%= yurt.description %></p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Max Capacity: <%= yurt.max_capacity %></li>
+          <li class="list-group-item">Location: <%= yurt.location %></li>
+          <li class="list-group-item"><%= yurt.day_rate %></li>
         </ul>
+
+        <div class="card-body">
+          <p><%= link_to 'More info', yurt_path(yurt.id) %></p>
+        </div>
       </div>
+    </div>
     <% end %>
+  </div>
 </div>
+
