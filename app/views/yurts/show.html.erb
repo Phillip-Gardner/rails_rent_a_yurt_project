@@ -4,7 +4,7 @@
     <div class="card">
       <div id="yurt-image">
         <% if @yurt.photo.attached? %>
-          <%= cl_image_tag @yurt.photo.key, height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag @yurt.photo.key, height: 400, width: 600, crop: :fill %>
         <% else %>
           <p>No image attached</p>
         <% end %>
