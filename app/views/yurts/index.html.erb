@@ -5,14 +5,12 @@
     <div class="col-12">
       <div class="yurt-card">
 
-        <div class="yurt-card-image">
-          <% if yurt.photo.attached? %>
-            <%= cl_image_tag yurt.photo.key, width: 240, height: 240, crop: :fill %>
-          <% else %>
+        <% if yurt.photo.attached? %>
+          <%= cl_image_tag yurt.photo.key, width: 240, height: 240, crop: :fill %>
+        <% else %>
             <i class="fas fa-square"></i>
             <p>No photo attached</p>
-          <% end %>
-        </div>
+        <% end %>
 
         <div class="yurt-card-body">
           <h5 class="card-title"><%= yurt.title %></h5>
