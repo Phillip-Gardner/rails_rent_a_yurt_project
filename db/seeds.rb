@@ -71,9 +71,9 @@ counter = 0
   user = User.create!(email: Faker::Internet.email, password: '123456')
   # user.photo.attach(io: user_file, filename: "#{user_filenames[counter]}", content_type: 'image/jpg')
   yurt_file = URI.open("#{yurt_photos[counter]}")
-  yurt = Yurt.new(title: "#{title[counter]}", description: "#{description[counter]}", location:"#{location[counter]}", max_capacity: "#{max_capacity[counter]}", day_rate:"#{day_rate[counter]}" )
+  yurt = Yurt.new(title: "#{title[counter]}", description: "#{description[counter]}", location:"#{location[counter]}", max_capacity: "#{max_capacity[counter]}", day_rate:"#{day_rate[counter]}", user_id: user.id )
   yurt.photo.attach(io: yurt_file, filename: "#{yurt_filenames[counter]}", content_type: 'image/jpg')
-  yurt.save
+  yurt.save!
   counter += 1
 end
 
