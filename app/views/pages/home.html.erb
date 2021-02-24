@@ -3,11 +3,11 @@
     <div class="hero-text">
       <h1>Rent a Yurt</h1>
       <p>Experience the best Yurts in the world</p>
-      <button type="button" class="btn"><%= link_to 'See available Yurts', yurts_path %></button>
+      <%= link_to 'See available Yurts', yurts_path, class: "button" %>
       <% if user_signed_in? %>
-      <button type="button" class="btn"><%= link_to 'Your Profile', profile_path %></button>
+        <%= link_to 'Your Profile', profile_path, class: "button" %>
       <% else %>
-      <button type="button" class="btn"><%= link_to 'Become a Host', new_user_registration_path %></button>
+        <%= link_to 'Become a Host', new_user_registration_path, class: "button" %>
       <% end %>
     </div>
   </div>
@@ -19,24 +19,32 @@
 </div>
 
 <div class ="featured">
-<div class="row">
+  <div class="row">
+    <% @yurts[0..2].each do |yurt| %>
+      <div class="column">
+        <div class="yurt-card-small">
+          <% if yurt.photo.attached? %>
+            <%= cl_image_tag yurt.photo.key, width: 240, height: 240, crop: :fill %>
+          <% else %>
+            <p>No image attached</p>
+          <% end %>
 
-  <% @yurts[0..2].each do |yurt| %>
-    <div class="column">
-      <div class="card">
-        <% if yurt.photo.attached? %>
-          <%= cl_image_tag yurt.photo.key, width: 240, height: 240, crop: :fill %>
-        <% else %>
-          <p>No image attached</p>
-        <% end %>
+          <div class="yurt-card-info">
+            <h3><%= yurt.title %></h3>
+            Sleeps <%= yurt.max_capacity %>
+            <div class="yurt-card-info-inline">
+              £<%= yurt.day_rate %> / night
 
-        <h3><%= yurt.title %></h3>
-        <p>Sleeps <%= yurt.max_capacity %></p>
-        <p><%= yurt.day_rate %></p>
+              <%= link_to yurt_path(yurt) do  %>
+                More Info
+              <% end %>
+            </div>
+          </div>
 
+
+        </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
 </div>
 
