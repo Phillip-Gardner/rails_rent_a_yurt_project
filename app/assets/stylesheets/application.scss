@@ -12,13 +12,14 @@
 @import "components/index";
 @import "pages/index";
 
-.container {
-  display: flex;
-  justify-content: space-evenly;
+
+h1, h2, h3 {
+  font-family: Raleway;
+  font-weight: lighter;
 }
 
-a:hover {
-  text-decoration: none;
+body {
+  font-family: Open Sans;
 }
 
 .btn {
@@ -39,4 +40,3 @@ a {
 a:hover {
   text-decoration: none;
   color:
-}
