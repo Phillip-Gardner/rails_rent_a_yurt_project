@@ -4,7 +4,10 @@
   display: flex;
 }
 
-
+.detailsholder {
+  display: flex;
+  justify-content: space-between;
+}
 
 .yurt-row{
   width: 55%;
@@ -50,7 +53,16 @@
   .day-rate {
     font-weight: bold;
     font-size: 20px;
-  }
+    width: 130px;
+    display:flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: flex-end;
+    margin-right: 10px;
+    width: 100px;
+    font-weight: bold;
+    padding: 30px;
+    }
 }
 
 
