@@ -12,9 +12,6 @@
 @import "components/index";
 @import "pages/index";
 
-a:hover {
-  text-decoration: none;
-}
 
 h1, h2, h3 {
   font-family: Raleway;
@@ -24,3 +21,22 @@ h1, h2, h3 {
 body {
   font-family: Open Sans;
 }
+
+.btn {
+  border: 0;
+  background-color: #42949E;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: semi-bold;
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color:

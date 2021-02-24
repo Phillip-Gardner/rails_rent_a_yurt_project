@@ -3,50 +3,40 @@
     <div class="hero-text">
       <h1>Rent a Yurt</h1>
       <p>Experience the best Yurts in the world</p>
-      <button type="button" class="btn btn-light"><%= link_to 'Yurts', yurts_path %></button>
-      <button type="button" class="btn btn-light"><%= link_to 'users sign in', new_user_session_path %></button>
-      <button type="button" class="btn btn-light"><%= link_to 'new yurt', new_yurt_path %></button>
-      <button type="button" class="btn btn-light"><%= link_to 'Add first name and last name', edit_user_registration_path %></button>
+      <button type="button" class="btn"><%= link_to 'See available Yurts', yurts_path %></button>
+      <% if user_signed_in? %>
+      <button type="button" class="btn"><%= link_to 'Your Profile', profile_path %></button>
+      <% else %>
+      <button type="button" class="btn"><%= link_to 'Become a Host', new_user_registration_path %></button>
+      <% end %>
     </div>
   </div>
 </div>
-  <br>
-  <div class="explore-text">
-    <h3>Yurts Near You</h3>
 
-    <div class="row">
+
+<div class="subheading-text">
+    <h3>Featured Yurts</h3>
+</div>
+
+<div class ="featured">
+<div class="row">
+
+  <% @yurts[0..2].each do |yurt| %>
     <div class="column">
       <div class="card">
-        <h3>Card 1</h3>
-        <p>Some text</p>
-        <p>Some text</p>
+        <% if yurt.photo.attached? %>
+          <%= cl_image_tag yurt.photo.key, width: 240, height: 240, crop: :fill %>
+        <% else %>
+          <p>No image attached</p>
+        <% end %>
+
+        <h3><%= yurt.title %></h3>
+        <p>Sleeps <%= yurt.max_capacity %></p>
+        <p><%= yurt.day_rate %></p>
+
       </div>
     </div>
-
-    <div class="column">
-      <div class="card">
-        <h3>Card 2</h3>
-        <p>Some text</p>
-        <p>Some text</p>
-      </div>
-    </div>
-
-    <div class="column">
-      <div class="card">
-        <h3>Card 3</h3>
-        <p>Some text</p>
-        <p>Some text</p>
-      </div>
-    </div>
-
-    <div class="column">
-      <div class="card">
-        <h3>Card 4</h3>
-        <p>Some text</p>
-        <p>Some text</p>
-      </div>
-    </div>
-  </div>
-
-  </div>
+  <% end %>
+</div>
+</div>
 
