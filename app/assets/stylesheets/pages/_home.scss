@@ -7,7 +7,7 @@
   /* Set a specific height/width */
   height: 600px;
   width: 100%;
- border-radius: 50px 20px;
+  border-radius: 50px 20px;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -36,13 +36,9 @@
   color: white;
 }
 
-
-.hero-text:hover {
-  text-decoration: none;
-}
-
-.explore-text {
-  padding: 25px 50px 75px 100px;
+.subheading-text {
+  text-align: center;
+  margin: 20px 30px 20px 30px;
 }
 
 /* Card Column */
@@ -54,22 +50,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 25%;
-  padding: 25px 25px 50px 75px;
-}
-
 /* Remove extra left and right margins, due to padding in columns */
-.row {margin: 0 -5px;}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+.row { justify-content: space-around; }
 
 /* Style the counter cards */
 .card {
@@ -77,6 +59,16 @@ body {
   padding: 16px;
   text-align: center;
   background-color: #f1f1f1;
+  width: 300px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.featured {
+  margin: 10px 40px 10px 40px;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
@@ -87,3 +79,4 @@ body {
     margin-bottom: 20px;
   }
 }
+
