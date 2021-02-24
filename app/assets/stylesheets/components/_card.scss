@@ -1,7 +1,89 @@
-// .card {
-//   padding: 20px;
-//   border-radius: 5px;
-//   // box-shadow: 1px 1px 1px 1px rgba(1,1,1,0.5);
-//   // margin-left: 10px;
-// }
-//
+
+.yurt-container{
+  margin: 30px;
+  display: flex;
+}
+
+
+
+.yurt-row{
+  width: 55%;
+  height: 100vh;
+  display:flex;
+  justify-content: flex-start;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 20px;
+}
+
+#yurt-image{
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.yurt-host-edit{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 10px;
+  i, a{
+    text-decoration: none;
+  color: #42949E
+}
+}
+
+.yurt-title{
+  margin: 10px;
+  h2{
+     font-weight: bold;
+  }
+
+}
+
+#yurt-info{
+  margin: 10px;
+  .description{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  .day-rate {
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+
+.card {
+  padding: 20px;
+  border-radius: 5px;
+  // box-shadow: 1px 1px 1px 1px rgba(1,1,1,0.5);
+  // margin-left: 10px;
+}
+
+
+.map-container{
+  width: 40%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+}
+
+.show-links{
+  display:block;
+  justify-content: flex-end;
+  .btn {
+  border: 0;
+  background-color: #42949E;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: semi-bold;
+  }
+}
+
+.link{
+  text-decoration: none;
+  color: #42949E;
+  margin: 10px;
+
+}
