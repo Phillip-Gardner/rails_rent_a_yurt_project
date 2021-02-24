@@ -9,7 +9,8 @@
           <% if yurt.photo.attached? %>
             <%= cl_image_tag yurt.photo.key, width: 240, height: 240, crop: :fill %>
           <% else %>
-            <p>No image attached</p>
+            <i class="fas fa-square"></i>
+            <p>No photo attached</p>
           <% end %>
         </div>
 
@@ -24,8 +25,8 @@
         </div>
 
 
-        <div class="yurt-link">
-          <p><%= link_to 'More info', yurt_path(yurt.id) %></p>
+        <div class="yurt-link" >
+          <p><%= link_to 'More info', yurt_path(yurt.id), class: "btn" %></p>
         </div>
       </div>
     </div>
@@ -36,6 +37,7 @@
 
   <div class="map-container">
     <div class="map">
+
     </div>
   </div>
 

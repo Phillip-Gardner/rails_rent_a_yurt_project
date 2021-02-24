@@ -56,6 +56,6 @@ new_yurt1 = Yurt.new(title:"Teepee", description: "A great TeePee", max_capacity
 new_yurt1.user = new_user
 new_yurt1.save
 
-new_yurt2 = Yurt.new(title:"Wedding Marque", description: "Brilliant for getting married", max_capacity: 100, location:"Kent", day_rate:"2800")
+new_yurt2 = Yurt.new(title:"Wedding Marquee", description: "Brilliant for getting married", max_capacity: 100, location:"Kent", day_rate:"2800")
 new_yurt2.user = user4
 new_yurt2.save
