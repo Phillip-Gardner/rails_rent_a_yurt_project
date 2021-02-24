@@ -18,9 +18,9 @@
 
 /* Header */
 .header {
-  padding: 25px 50px 75px 100px;
+  padding: 50px 75px;
   text-align: center;
-  background: #A4C0C4;
+  background: rgba(164, 192, 196, 0.3);
   color: white;
   opacity: 0.9;
   font-size: 30px;
@@ -57,7 +57,7 @@ body {
 /* Float four columns side by side */
 .column {
   float: left;
-  width: 50%;
+  width: 25%;
   padding: 25px 25px 50px 75px;
 }
 
