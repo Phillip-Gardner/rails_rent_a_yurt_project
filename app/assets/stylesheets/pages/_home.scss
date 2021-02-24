@@ -7,12 +7,23 @@
   /* Set a specific height/width */
   height: 600px;
   width: 100%;
+ border-radius: 50px 20px;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+/* Header */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #A4C0C4;
+  color: white;
+  opacity: 0.9;
+  font-size: 30px;
 }
 
 /* Text in the middle of the image */
@@ -28,6 +39,10 @@
 
 .hero-text:hover {
   text-decoration: none;
+}
+
+.explore-text {
+
 }
 
 /* Card Column */
