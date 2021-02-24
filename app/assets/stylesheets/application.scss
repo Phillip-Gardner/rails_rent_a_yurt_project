@@ -13,8 +13,12 @@
 @import "pages/index";
 
 .container {
-  display: flex;
-  justify-content: space-evenly;
+  margin: 20px auto;
+  background-color: #fff;
+  border: 1px solid rgba(66, 148, 158, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+
 }
 
 a:hover {
@@ -23,6 +27,7 @@ a:hover {
 
 h1, h2, h3 {
   font-family: Raleway;
+  font-weight: lighter;
 }
 
 body {
