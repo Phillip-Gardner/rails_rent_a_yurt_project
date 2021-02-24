@@ -1,32 +1,54 @@
-<div class="container">
+<div class="yurt-index">
+  <div class="yurts-container">
   <div class="row align-items-center">
     <% @yurts.each do |yurt| %>
-    <div class="col-4">
-      <div class="card" style="width: 320px;">
+    <div class="col-12">
+      <div class="yurt-card">
 
-        <% if yurt.photo.attached? %>
-          <%= cl_image_tag yurt.photo.key, width: 240, height: 240, crop: :fill %>
-        <% else %>
-          <p>No image attached</p>
-        <% end %>
-
-        <div class="card-body">
-          <h5 class="card-title"><%= yurt.title %></h5>
-          <p class="card-text"><%= yurt.description %></p>
+        <div class="yurt-card-image">
+          <% if yurt.photo.attached? %>
+            <%= cl_image_tag yurt.photo.key, width: 240, height: 240, crop: :fill %>
+          <% else %>
+            <i class="fas fa-square"></i>
+            <p>No photo attached</p>
+          <% end %>
         </div>
 
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Max Capacity: <%= yurt.max_capacity %></li>
-          <li class="list-group-item">Location: <%= yurt.location %></li>
-          <li class="list-group-item"><%= yurt.day_rate %></li>
-        </ul>
+        <div class="yurt-card-body">
+          <h5 class="card-title"><%= yurt.title %></h5>
+          <p class="card-location"><%= yurt.location %></p>
+          <p class="card-descrirption"><%= yurt.description %></p>
+          <p class="card-text">Max Capacity: <%= yurt.max_capacity %></p>
+          <div class="yurt-rate">
+            <p>Day rate: £<%= yurt.day_rate %>
+          </div>
+        </div>
 
-        <div class="card-body">
-          <p><%= link_to 'More info', yurt_path(yurt.id) %></p>
+
+        <div class="yurt-link" >
+          <p><%= link_to 'More info', yurt_path(yurt.id), class: "btn" %></p>
         </div>
       </div>
     </div>
     <% end %>
   </div>
-</div>
+  </div>
 
+
+  <div class="map-container">
+    <div class="map">
+      <%= image_tag "map4.png", crop: :fill %>
+    </div>
+    <i class="icon1">
+      <%= image_tag "YurtLogo.png", height: 50, width: 50 %>
+    </i>
+       <i class="icon2">
+      <%= image_tag "YurtLogo.png", height: 50, width: 50 %>
+    </i>
+
+
+
+  </div>
+
+
+</div>
