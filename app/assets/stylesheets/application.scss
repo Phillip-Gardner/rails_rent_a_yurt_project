@@ -22,22 +22,12 @@ body {
   font-family: Open Sans;
 }
 
-.btn {
-  border: 0;
-  background-color: #42949E;
-  border-radius: 10px;
-  padding: 10px 20px;
-  color: #fff;
-  font-weight: semi-bold;
-  color: white;
-  text-decoration: none;
-}
-
 a {
-  color: white;
+  color: #fff;
 }
 
 a:hover {
   text-decoration: none;
-  color: white;
+  color: #fff;
+  opacity: 0.8;
 }
