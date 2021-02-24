@@ -19,11 +19,6 @@ user3 = User.create(email: 'Kurt@gmail.com', password: 'Password!')
 user4 = User.create(email: 'yurt_owner@email.com', password: 'iloveyurts')
 user5 = User.create(email: 'email@yahoo.com', password: 'password1')
 
-
-
-new_booking = Booking.create(booked_from: '28/07/2021', booked_to: '29/07/2021', total_cost: '250', user: user3, yurt: new_yurt2)
-new_booking = Booking.create(booked_from: '01/03/2021', booked_to: '10/03/2021', total_cost: '35', user: user5, yurt: new_yurt1)
-
 # puts "Destroy users"
 # User.destroy_all if Rails.env.development?
 title = ["Lovely Yurt", "Kurt's Yurt", "Best Yurt", "Stunning Teepee", "Gorgeous Tent"]
@@ -52,10 +47,7 @@ counter = 0
   counter += 1
 end
 
-new_yurt1 = Yurt.new(title:"Teepee", description: "A great TeePee", max_capacity: 10, location:"Suffolk", day_rate:"55", user_id: 1)
-new_yurt1.user = new_user
-new_yurt1.save
 
-new_yurt2 = Yurt.new(title:"Wedding Marquee", description: "Brilliant for getting married", max_capacity: 100, location:"Kent", day_rate:"2800")
-new_yurt2.user = user4
-new_yurt2.save
+new_booking = Booking.create(booked_from: '28/07/2021', booked_to: '29/07/2021', total_cost: '250', user: user3, yurt: Yurt.first)
+new_booking = Booking.create(booked_from: '01/03/2021', booked_to: '10/03/2021', total_cost: '35', user: user5, yurt: Yurt.last)
+
