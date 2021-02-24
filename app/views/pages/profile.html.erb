@@ -1,41 +1,4 @@
 
-
-<h3>Your Yurts</h3>
-
-<div class="row">
-  <% if @yurts.nil? %>
-    <p>You don't have any yurts.</p>
-    <%= link_to 'Add a yurt', new_yurt  %>
-  <% else %>
-    <% @yurts.each do |yurt| %>
-      <div class="column">
-        <div class="yurt-card-small">
-          <% if yurt.photo.attached? %>
-            <%= cl_image_tag yurt.photo.key, width: 240, height: 240, crop: :fill %>
-          <% else %>
-            <p>No image attached</p>
-          <% end %>
-
-          <div class="yurt-card-info">
-            <h3><%= yurt.title %></h3>
-            Sleeps <%= yurt.max_capacity %>
-            <div class="yurt-card-info-inline">
-              £<%= yurt.day_rate %> / night
-
-              <%= link_to yurt_path(yurt) do  %>
-                More Info
-              <% end %>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-    <% end %>
-  <% end %>
-</div>
-
-
 <div class="container">
 
   <div>
@@ -43,8 +6,35 @@
       <div class = "profile-page-header">
         <h3>Your Yurt Listings</h3>
       </div>
-      <div>
-        Listings
+      <div class="row">
+        <% if @yurts.nil? %>
+          <p>You don't have any yurts.</p>
+          <%= link_to 'Add a yurt', new_yurt  %>
+        <% else %>
+          <% @yurts.each do |yurt| %>
+            <div class="column">
+              <div class="yurt-card-small">
+                <% if yurt.photo.attached? %>
+                  <%= cl_image_tag yurt.photo.key, width: 240, height: 240, crop: :fill %>
+                <% else %>
+                  <p>No image attached</p>
+                <% end %>
+
+                <div class="yurt-card-info">
+                  <h3><%= yurt.title %></h3>
+                  Sleeps <%= yurt.max_capacity %>
+                  <div class="yurt-card-info-inline">
+                    £<%= yurt.day_rate %> / night
+
+                    <%= link_to yurt_path(yurt) do  %>
+                      More Info
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>
@@ -67,7 +57,7 @@
                   <p>No image attached</p>
                 <% end %>
                 <p><%= booking.yurt.title %></p>
-                <button type="button" class="btn"><%= link_to 'View booking details', booking_path(booking.id) %></button>
+                <button type="button" class="button"><%= link_to 'View booking details', booking_path(booking.id) %></button>
               </div>
             </div>
           <% end %>
