@@ -1,26 +1,3 @@
 // Import page-specific CSS files here.
 @import "home";
 
-/* Footer */
-footer {
-  padding: 10px 10px;
-  background: rgb(222, 230, 231);
-  height: auto;
-}
-
-/* Footer P*/
-.list-inline, .copyright {
-  text-align: center;
-  color: rgba(1, 1, 1, 0.7);
-  a {
-    color: rgba(1, 1, 1, 0.7);
-  }
-}
-
-.icons {
-  text-align: center;
-  color: #2D6B75;
-  font-size: 1.2em;
-  padding-right: 2em;
-  text-shadow: 1px 1px 1px #ccc;
-}
