@@ -8,10 +8,11 @@
       </div>
       <div class="profile-page-row">
         <% if @yurts.empty? %>
-          <%= link_to 'Become a host', new_yurt_path, class: "button"  %>
+          <p>You don't have any yurts listed.</p>
+          <%= link_to 'Become a host!', new_yurt_path, class: "button"  %>
         <% else %>
           <% @yurts.each do |yurt| %>
-            <div class="column">
+            <div class="profile-page-column">
               <div class="yurt-card-small">
                 <% if yurt.photo.attached? %>
                   <%= cl_image_tag yurt.photo.key, width: 240, height: 240, crop: :fill %>
