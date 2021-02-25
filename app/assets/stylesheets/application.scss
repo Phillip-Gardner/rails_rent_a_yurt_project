@@ -1,18 +1,19 @@
-// Graphical variables
-@import "config/fonts";
-@import "config/colors";
-@import "config/bootstrap_variables";
-
-// Your CSS partials
-@import "components/index";
-@import "pages/index";
-
 // External libraries
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
 
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// Your CSS partials
+@import "components/import";
+@import "pages/import";
+@import "yurts/import";
+@import "bookings/import";
 
 
 h1, h2, h3 {
