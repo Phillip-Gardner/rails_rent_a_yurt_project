@@ -7,9 +7,8 @@
         <h3>Your Yurt Listings</h3>
       </div>
       <div class="row">
-        <% if @yurts.nil? %>
-          <p>You don't have any yurts.</p>
-          <%= link_to 'Add a yurt', new_yurt  %>
+        <% if @yurts.empty? %>
+          <%= link_to 'Become a host', new_yurt_path, class: "button"  %>
         <% else %>
           <% @yurts.each do |yurt| %>
             <div class="column">
@@ -26,9 +25,7 @@
                   <div class="yurt-card-info-inline">
                     £<%= yurt.day_rate %> / night
 
-                    <%= link_to yurt_path(yurt) do  %>
-                      More Info
-                    <% end %>
+                    <%= link_to 'More info', yurt_path(yurt), class: "button"  %>
                   </div>
                 </div>
               </div>
@@ -57,7 +54,7 @@
                   <p>No image attached</p>
                 <% end %>
                 <p><%= booking.yurt.title %></p>
-                <button type="button" class="button"><%= link_to 'View booking details', booking_path(booking.id) %></button>
+                <%= link_to 'View booking details', booking_path(booking.id), class: "button" %>
               </div>
             </div>
           <% end %>
@@ -71,14 +68,14 @@
   <div>
     <div>
       <div class="profile-page-header">
-        <h3>Your Profile Information</h3>
+        <h3>Your Details</h3>
       </div>
       <div class = "container">
           <p>Email: <%= @user.email %></p>
           <p>First name: <%= @user.first_name %></p>
           <p>Last name: <%= @user.last_name %></p>
           <%= link_to edit_user_registration_path do %>
-            <i class="fas fa-edit"></i><p>Edit info</p>
+            Edit info <i class="fas fa-edit"></i>
           <% end %>
       </div>
     </div>
