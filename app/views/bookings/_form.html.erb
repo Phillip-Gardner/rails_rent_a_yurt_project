@@ -9,5 +9,5 @@
 <%= simple_form_for [@yurt, @booking] do |f| %>
   <%= f.input :booked_from, as: :date, html5: true, label: 'From' %>
   <%= f.input :booked_to, as: :date, html5: true, label: 'To' %>
-  <%= f.button :button, "Make booking" %>
+  <%= f.submit "Book this yurt!", class: "button" %>
  <% end %>
