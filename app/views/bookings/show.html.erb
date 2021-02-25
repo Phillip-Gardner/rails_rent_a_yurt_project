@@ -7,5 +7,6 @@
   <p>Dates: <%= @booking.booked_from %> - <%= @booking.booked_to %></p>
   <p>Total cost: <%= @booking.total_cost %></p>
 
+  <%= link_to 'Cancel this booking', booking_path(@booking.id), method: :delete, data: { confirm: 'Are you sure?' } %>
   <p><%= link_to 'Back', yurt_path(@booking.yurt_id) %></p>
 </div>

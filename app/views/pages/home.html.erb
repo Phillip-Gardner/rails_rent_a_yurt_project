@@ -2,13 +2,9 @@
   <div class="hero-image">
     <div class="hero-text">
       <h1>Rent a Yurt</h1>
-      <p>Experience the best Yurts in the world</p>
-      <%= link_to 'See available Yurts', yurts_path, class: "button" %>
-      <% if user_signed_in? %>
-        <%= link_to 'Your Profile', profile_path, class: "button" %>
-      <% else %>
-        <%= link_to 'Become a Host', new_user_registration_path, class: "button" %>
-      <% end %>
+      <p>Experience the best yurts in the world</p>
+      <%= link_to 'Find a yurt', yurts_path, class: "button" %>
+      <%= link_to 'Host your yurt', new_user_registration_path, class: "button" %>
     </div>
   </div>
 </div>
@@ -35,9 +31,7 @@
             <div class="yurt-card-info-inline">
               £<%= yurt.day_rate %> / night
 
-              <%= link_to yurt_path(yurt) do  %>
-                More Info
-              <% end %>
+              <%= link_to 'More Info', yurt_path(yurt), class: 'button' %>
             </div>
           </div>
 

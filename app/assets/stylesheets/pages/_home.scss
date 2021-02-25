@@ -7,7 +7,7 @@
   /* Set a specific height/width */
   height: 600px;
   width: 100%;
-  border-radius: 50px 20px;
+  border-radius: 20px;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -24,6 +24,7 @@
   color: white;
   opacity: 0.9;
   font-size: 30px;
+  box-shadow: 0 10px #dfe7e7;
 }
 
 /* Text in the middle of the image */
@@ -48,6 +49,12 @@
 
 /* Remove extra left and right margins, due to padding in columns */
 .row { justify-content: space-around; }
+
+.left-aligned-row {
+
+  align-items: flex-start;
+
+}
 
 .featured {
   margin: 10px 40px 10px 40px;
