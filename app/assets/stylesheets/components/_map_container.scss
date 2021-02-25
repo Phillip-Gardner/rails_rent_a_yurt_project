@@ -2,12 +2,14 @@
   display:flex;
   align-items: center;
   margin-top: 40px;
-  width: 40%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 0;
 }
 
 .map {
     position: cover;
+    padding: 0;
   }
 
   .icon1, .icon2 {
