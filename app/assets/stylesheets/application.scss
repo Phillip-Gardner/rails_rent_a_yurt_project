@@ -1,3 +1,9 @@
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
+
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
@@ -8,14 +14,6 @@
 @import "pages/import";
 @import "yurts/import";
 @import "bookings/import";
-
-
-// External libraries
-@import "bootstrap/scss/bootstrap";
-@import "font-awesome-sprockets";
-@import "font-awesome";
-@import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
-
 
 
 h1, h2, h3 {
