@@ -2,6 +2,7 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
 
 // Graphical variables
 @import "config/fonts";
@@ -11,10 +12,6 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-
-
-
-
 
 h1, h2, h3 {
   font-family: Raleway;
