@@ -24,8 +24,8 @@ require("channels")
 
 // External imports
 import "bootstrap";
-// import { initMapbox } from '../plugins/init_mapbox';
-// import { init_autocomplete } from '../plugins/init_autocomplete';
+import { initMapbox } from '../plugins/init_mapbox';
+import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initUpdateNavbarOnScroll } from "../components/scroll_navbar";
 
 // Internal imports, e.g:
@@ -36,7 +36,8 @@ import { initUpdateNavbarOnScroll } from "../components/scroll_navbar";
   // initSelect2();
 
 document.addEventListener('turbolinks:load', () => {
-  // initMapbox();
+  initMapbox();
+  initAutocomplete();
   initUpdateNavbarOnScroll();
 })
 
