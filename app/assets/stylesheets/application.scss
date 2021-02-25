@@ -10,8 +10,11 @@
 @import "config/bootstrap_variables";
 
 // Your CSS partials
-@import "components/index";
-@import "pages/index";
+@import "components/import";
+@import "pages/import";
+@import "yurts/import";
+@import "bookings/import";
+
 
 h1, h2, h3 {
   font-family: Raleway;

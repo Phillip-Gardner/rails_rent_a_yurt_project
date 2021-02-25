@@ -1,7 +1,8 @@
-// Import page-specific CSS files here.
-@import "home";
+.yield-container {
+  min-height: 100vh;
+}
 
-/* Footer */
+// Footer
 footer {
   padding: 10px 10px;
   background: rgb(222, 230, 231);
