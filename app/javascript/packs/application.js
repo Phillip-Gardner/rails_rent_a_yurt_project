@@ -43,6 +43,5 @@ document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
 })
 
-});
-
   loadDynamicBannerText();
+
