@@ -6,7 +6,7 @@
       <div class = "profile-page-header">
         <h3>Your Yurt Listings</h3>
       </div>
-      <div class="row">
+      <div class="profile-page-row">
         <% if @yurts.empty? %>
           <%= link_to 'Become a host', new_yurt_path, class: "button"  %>
         <% else %>
@@ -43,7 +43,7 @@
       </div>
       <div>
         <div class="bookings">
-          <div class="row">
+          <div class="profile-page-row">
             <% if @bookings.empty? %>
               <div>
                 You have no bookings.
