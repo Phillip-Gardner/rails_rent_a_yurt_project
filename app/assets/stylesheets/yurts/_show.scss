@@ -1,3 +1,90 @@
 /* CSS goes here for the yurt show page */
 
+// container for everything on the page
+.show-page {
+  display:flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+// container for the yurt show card and the host details
+.yurt-container {
+  padding: 40px;
+
+}
+
+// show page container
+.show-card {
+  background-color: #fff;
+  margin: 0 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+// styling on the image tag on the yurt show card
+ .yurt-image {
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+
+
+// container for all the yurt show card text and information
+.yurt-card-text{
+  display: block;
+  margin: 20px;
+  padding: 20px;
+  padding-bottom: 40px;
+  .yurt-title h2 {
+     font-weight: bold;
+  }
+}
+
+  .capacity-cost{
+    display:flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .description{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .host-email{
+    padding-bottom: 20px;
+  }
+
+
+
+.yurt-host-edit{
+  display: block;
+  padding-left: 40px;
+  padding-top: 30px;
+  // margin-bottom: 300px;
+  i, a{
+    text-decoration: none;
+    color: #42949E
+  }
+}
+
+// .card {
+//   padding: 40px;
+//   border-radius: 5px;
+//   // box-shadow: 1px 1px 1px 1px rgba(1,1,1,0.5);
+//   // margin-left: 10px;
+// }
+
+
+
+// .link{
+//   text-decoration: none;
+//   color: #42949E;
+//   margin: 10px;
+
+// }
 
