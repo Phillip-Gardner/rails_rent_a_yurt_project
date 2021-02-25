@@ -35,9 +35,7 @@
             <div class="yurt-card-info-inline">
               £<%= yurt.day_rate %> / night
 
-              <%= link_to yurt_path(yurt) do  %>
-                More Info
-              <% end %>
+              <%= link_to 'More Info', yurt_path(yurt), class: 'button' %>
             </div>
           </div>
 
