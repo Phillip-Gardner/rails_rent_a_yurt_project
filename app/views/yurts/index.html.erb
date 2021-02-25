@@ -33,6 +33,7 @@
       </div>
     </div>
 
+<<<<<<< HEAD
 
     <div class="map-container">
       <div class="map">
@@ -45,5 +46,12 @@
         <%= image_tag "YurtLogo.png", height: 50, width: 50 %>
       </i>
     </div>
+=======
+  <div class="map-container">
+    <div id="map"
+      style="width: 100%; height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+>>>>>>> 0ea22e963acdeab11877ca542af235b5cbab4e7e
   </div>
 </div>
