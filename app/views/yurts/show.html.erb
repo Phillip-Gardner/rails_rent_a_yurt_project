@@ -41,8 +41,7 @@
 
 
       <div class="show-links">
-        <p><%= link_to 'Book this yurt', new_yurt_booking_path(@yurt), class:"btn" %></p>
-        <p><%= link_to 'Back', yurts_path, class: "link" %></p>
+        <p><%= link_to 'Book this yurt', new_yurt_booking_path(@yurt), class:"button" %></p>
       </div>
     </div>
   </div>
@@ -64,11 +63,11 @@
       <h5>Yurt Host actions:</h5>
       <div class="yurt-edit">
         <%= link_to edit_yurt_path @yurt do %>
-          Update <i class="fas fa-edit"></i>
+          Update yurt details <i class="fas fa-edit"></i>
         <% end %>
       </div>
       <div class="yurt-delete">
-        <%= link_to 'delete', yurt_path(@yurt.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Delete your yurt', yurt_path(@yurt.id), method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
     </div>
   </div>

@@ -49,6 +49,12 @@
 /* Remove extra left and right margins, due to padding in columns */
 .row { justify-content: space-around; }
 
+.left-aligned-row {
+
+  align-items: flex-start;
+
+}
+
 .featured {
   margin: 10px 40px 10px 40px;
 }
