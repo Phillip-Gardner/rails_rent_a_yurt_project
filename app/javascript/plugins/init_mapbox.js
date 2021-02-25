@@ -11,7 +11,7 @@ const initMapbox = () => {
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/elizaplowden/cklkvfp771udy17qnl7purtig',
-      zoom: 1
+
     });
     map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
                                       mapboxgl: mapboxgl }));
@@ -43,6 +43,8 @@ const fitMapToMarkers = (map, markers) => {
   markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
   map.fitBounds(bounds, { padding: 80, maxZoom: 30, duration: 0 });
 };
+
+
 
 export { initMapbox };
 
