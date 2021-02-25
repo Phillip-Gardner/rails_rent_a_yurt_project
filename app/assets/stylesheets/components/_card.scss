@@ -1,10 +1,17 @@
+.show-page {
+  display:block;
+}
 
 .yurt-container{
   margin: 30px;
+
   display: flex;
 }
 
-
+.detailsholder {
+  display: flex;
+  justify-content: space-between;
+}
 
 .yurt-row{
   width: 55%;
@@ -14,45 +21,62 @@
   margin: 20px;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  padding: 20px;
+
 }
 
 #yurt-image{
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 600px;
 }
 
-.yurt-host-edit{
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  flex-direction: column;
-  margin: 10px;
-  i, a{
-    text-decoration: none;
-  color: #42949E
-}
-}
-
-.yurt-title{
-  margin: 10px;
+.yurt-card-text{
+  display: block;
+  margin: 20px;
+  .yurt-title{
   h2{
      font-weight: bold;
   }
+  }
+  .capacity-cost{
+    display:flex;
+    justify-content: space-between;
+     font-weight: bold;
+    font-size: 20px;
+  }
 
-}
-
-#yurt-info{
-  margin: 10px;
   .description{
     margin-bottom: 10px;
     padding-bottom: 10px;
   }
+
   .day-rate {
     font-weight: bold;
     font-size: 20px;
-  }
+    width: 130px;
+    display:flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: flex-end;
+    margin-right: 10px;
+    width: 100px;
+    font-weight: bold;
+    padding: 30px;
+    }
 }
 
+.yurt-host-edit{
+  display: block;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 50px;
+  margin-left: 80px;
+  margin-bottom: 300px;
+  i, a{
+    text-decoration: none;
+    color: #42949E
+  }
+}
 
 .card {
   padding: 20px;
@@ -71,6 +95,10 @@
 .show-links{
   display:block;
   justify-content: flex-end;
+  align-items: flex-end;
+  margin: 20px;
+  margin-top: 200px;
+
   .btn {
   border: 0;
   background-color: #42949E;

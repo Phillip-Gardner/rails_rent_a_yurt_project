@@ -14,17 +14,17 @@
 
         <div class="yurt-card-body">
           <h5 class="card-title"><%= yurt.title %></h5>
-          <p class="card-location"><%= yurt.location %></p>
-          <p class="card-descrirption"><%= yurt.description %></p>
-          <p class="card-text">Max Capacity: <%= yurt.max_capacity %></p>
-          <div class="yurt-rate">
-            <p>Day rate: £<%= yurt.day_rate %>
+          <div class="card-location"><%= yurt.location %></div>
+          <div class="card-description"><%= yurt.description %></div>
+          <div class="detailsholder">
+          <div class="card-text">Max Capacity: <%= yurt.max_capacity %></div>
+           <div class="day-rate"> Day rate: £<%= yurt.day_rate %></div>
           </div>
         </div>
 
 
         <div class="yurt-link" >
-          <p><%= link_to 'More info', yurt_path(yurt.id), class: "btn" %></p>
+          <%= link_to 'More info', yurt_path(yurt.id), class: "button" %>
         </div>
       </div>
     </div>
