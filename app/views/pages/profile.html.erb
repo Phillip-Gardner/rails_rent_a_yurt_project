@@ -63,9 +63,9 @@
                     <div class="booking-card-info">
                       <h3><%= booking.yurt.title %></h3>
 
-                      <p>
+                      <div class="booking-dates">
                         <strong><%= booking.booked_from.strftime("%a %e %b %y") %></strong> to <strong><%= booking.booked_to.strftime("%a %e %b %y") %></strong>
-                      </p>
+                      </div>
                       <%= link_to 'View booking details', booking_path(booking.id), class: "button" %>
                     </div>
                   </div>
@@ -84,7 +84,7 @@
       <div class="profile-page-header">
         <h3>Your Details</h3>
       </div>
-      <div class = "container">
+      <div class = "details-container">
           <p>Email: <%= @user.email %></p>
           <p>First name: <%= @user.first_name %></p>
           <p>Last name: <%= @user.last_name %></p>
