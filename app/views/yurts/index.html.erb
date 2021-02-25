@@ -7,8 +7,10 @@
               <% if yurt.photo.attached? %>
                 <%= cl_image_tag yurt.photo.key, width: 240, height: 240, crop: :fill %>
               <% else %>
-                  <i class="fas fa-square"></i>
-                  <p>No photo attached</p>
+                <div style="width: 240px, height: 240px">
+                    <i class="fas fa-square"></i>
+                    <p>No photo attached</p>
+                </div>
               <% end %>
               <div class="yurt-card-body">
                 <h5 class="card-title"><%= yurt.title %></h5>
