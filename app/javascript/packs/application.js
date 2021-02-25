@@ -26,6 +26,7 @@ require("channels")
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { init_autocomplete } from '../plugins/init_autocomplete';
+import { loadDynamicBannerText } from '../components/banner';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -37,5 +38,7 @@ import { init_autocomplete } from '../plugins/init_autocomplete';
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initAutcomplete();
-})
 
+});
+
+  loadDynamicBannerText();
