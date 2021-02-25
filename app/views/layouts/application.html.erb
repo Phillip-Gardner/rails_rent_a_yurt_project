@@ -17,21 +17,9 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
+    <div class="yield-container">
     <%= yield %>
-    <!--Footer-->
-    <footer>
-      <ul class="icons">
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-facebook-f"></i>
-      </ul>
-       <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#">Home</a></li>
-                    <li class="list-inline-item"><a href="#">About</a></li>
-                    <li class="list-inline-item"><a href="#">Terms</a></li>
-                    <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-                </ul>
-      <p class="copyright">© 2021 RentAYurt, Inc. All rights reserved</p>
-      </footer>
+    </div>
+    <%= render 'shared/footer' %>
   </body>
 </html>
