@@ -9,7 +9,7 @@ class YurtsController < ApplicationController
         lat: yurt.latitude,
         lng: yurt.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { yurt: yurt }),
-        image_url: helpers.asset_url('YurtLogo.png')
+        image_url: helpers.asset_url('image.png')
       }
     end
   end
