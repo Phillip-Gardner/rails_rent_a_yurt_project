@@ -2,12 +2,6 @@
   display:block;
 }
 
-.yurt-container{
-  margin: 30px;
-
-  display: flex;
-}
-
 .yurt-row{
   width: 55%;
   height: 100vh;
@@ -17,11 +11,6 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
-}
-
-#yurt-image{
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 600px;
 }
 
 .yurt-card-text{
@@ -81,12 +70,6 @@
 }
 
 
-.map-container{
-  width: 40%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
-}
-
 .show-links{
   display:block;
   justify-content: flex-end;
@@ -94,14 +77,6 @@
   margin: 20px;
   margin-top: 200px;
 
-  .btn {
-  border: 0;
-  background-color: #42949E;
-  border-radius: 10px;
-  padding: 10px 20px;
-  color: #fff;
-  font-weight: semi-bold;
-  }
 }
 
 .link{

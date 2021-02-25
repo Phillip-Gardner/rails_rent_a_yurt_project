@@ -1,14 +1,16 @@
 <div class="yurt-index">
-    <div class="yurts-container col-6">
-      <div class="row align-items-center">
+    <div class="yurts-container">
+      <div class="row">
         <% @yurts.each do |yurt| %>
           <div class="col-12">
             <div class="yurt-card">
               <% if yurt.photo.attached? %>
-                <%= cl_image_tag yurt.photo.key, width: 240, height: 240, crop: :fill %>
+                <%= cl_image_tag yurt.photo.key, class: 'yurt-card-image', crop: :fill %>
               <% else %>
-                  <i class="fas fa-square"></i>
-                  <p>No photo attached</p>
+                <div style="width: 240px, height: 240px">
+                    <i class="fas fa-square"></i>
+                    <p>No photo attached</p>
+                </div>
               <% end %>
               <div class="yurt-card-body">
                 <h5 class="card-title"><%= yurt.title %></h5>
