@@ -6,11 +6,5 @@
     <%= f.input :location, label: 'Where is it?' %>
     <%= f.input :max_capacity, label: 'How many people?' %>
     <%= f.input :day_rate, label: 'What is the price for one night?' %>
-    <%= f.button :button do %>
-      <% if @yurt.title.nil? %>
-        List your yurt!
-      <% else %>
-        Update your yurt!
-      <% end %>
-    <% end %>
+    <%= f.submit "List your yurt!", class: "button" %>
   <% end %>
