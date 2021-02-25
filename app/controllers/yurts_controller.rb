@@ -4,6 +4,14 @@ class YurtsController < ApplicationController
 
   def index
     @yurts = Yurt.all
+    @markers = @yurts.geocoded.map do |yurt|
+      {
+        lat: yurt.latitude,
+        lng: yurt.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { yurt: yurt }),
+        image_url: helpers.asset_url('YurtLogo.png')
+      }
+    end
   end
 
   def show
