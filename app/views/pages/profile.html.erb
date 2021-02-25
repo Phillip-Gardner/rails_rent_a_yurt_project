@@ -53,14 +53,20 @@
               <% @bookings.each do |booking| %>
                 <div class="column">
                   <div class="card" id="booking-card">
-                    <p>From <%= booking.booked_from %> Until <%= booking.booked_to %></p>
                     <% if booking.yurt.photo.attached? %>
                       <%= cl_image_tag booking.yurt.photo.key, width: 240, height: 240, crop: :fill %>
                     <% else %>
                       <p>No image attached</p>
                     <% end %>
-                    <p><%= booking.yurt.title %></p>
-                    <%= link_to 'View booking details', booking_path(booking.id), class: "button" %>
+
+                    <div class="booking-card-info">
+                      <h3><%= booking.yurt.title %></h3>
+
+                      <p>
+                        <strong><%= booking.booked_from.strftime("%a %e %b %y") %></strong> to <strong><%= booking.booked_to.strftime("%a %e %b %y") %></strong>
+                      </p>
+                      <%= link_to 'View booking details', booking_path(booking.id), class: "button" %>
+                    </div>
                   </div>
                 </div>
               <% end %>

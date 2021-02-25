@@ -1,0 +1,37 @@
+/* includes all the css for the booking card on the profile page */
+#booking-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  width: 300px;
+}
+
+
+#booking-card p {
+  margin: 1rem 0;
+  text-align: left;
+}
+
+
+
+#booking-card img {
+  border-radius: 5px;
+  margin: 13px;
+  width:91%;
+}
+
+.profile-page-header {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.booking-card-info {
+  background-color: #fff;
+  margin: 0;
+  padding: 13px;
+  border-radius: 0 0 5px 5px;
+}
+
+#booking-card a {
+  padding: 5px 10px;
+}

@@ -1,22 +1,15 @@
-// Specific CSS for your home-page
-
-/* The hero image */
 .hero-image {
-  /* Linear-gradient" to add a darken background effect to the image */
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://res.cloudinary.com/dlxlmoq7d/image/upload/v1614015964/Yurt_tzoxbt.jpg);
-  /* Set a specific height/width */
   height: 600px;
   width: 100%;
   border-radius: 20px;
 
-  /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
 
-/* Header */
 .header {
   padding: 50px 75px;
   text-align: center;
@@ -27,7 +20,6 @@
   box-shadow: 0 10px #dfe7e7;
 }
 
-/* Text in the middle of the image */
 .hero-text {
   text-align: center;
   position: absolute;
@@ -42,12 +34,10 @@
   margin: 20px 30px 20px 30px;
 }
 
-/* Card Column */
 * {
   box-sizing: border-box;
 }
 
-/* Remove extra left and right margins, due to padding in columns */
 .row { justify-content: space-around; }
 
 .left-aligned-row {
@@ -60,7 +50,6 @@
   margin: 10px 40px 10px 40px;
 }
 
-/* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
