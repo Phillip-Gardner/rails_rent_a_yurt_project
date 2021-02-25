@@ -33,18 +33,20 @@
   margin: 20px;
   padding: 20px;
   padding-bottom: 40px;
-  .yurt-title{
+
+
+}
+.yurt-title{
+  padding-bottom: 20px;
   h2{
      font-weight: bold;
   }
-  }
 }
-
   .capacity-cost{
     display:flex;
     justify-content: space-between;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .description{
@@ -54,6 +56,12 @@
 
   .host-email{
     padding-bottom: 20px;
+  }
+
+  .show-links{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
 
