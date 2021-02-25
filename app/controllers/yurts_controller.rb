@@ -15,6 +15,12 @@ class YurtsController < ApplicationController
   end
 
   def show
+    @markers = [{
+      lat: @yurt.latitude,
+      lng: @yurt.longitude,
+      infoWindow: render_to_string(partial: "info_window", locals: { yurt: @yurt }),
+      image_url: helpers.asset_url('image.png')
+    }]
   end
 
   def new

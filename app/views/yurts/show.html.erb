@@ -14,7 +14,7 @@
           <div class="yurt-title"><h2><%= @yurt.title %></h2></div>
           <div id="yurt-info">
             <div class="location"><p><%= @yurt.location %></p></div>
-            <div class="description"><h4><%= @yurt.description %></h4></div>
+            <div class="description"><%= @yurt.description %></div>
             <div class="capacity-cost">
               <div class="capacity"><p>Max Capacity: <%= @yurt.max_capacity %></p></div>
               <div class="day-rate"><p>Day rate: £<%= @yurt.day_rate %></p></div>
@@ -25,6 +25,7 @@
 
           <div class="show-links">
            <%= link_to 'Book this yurt', new_yurt_booking_path(@yurt), class:"button" %>
+          <%= link_to 'Back to yurts', yurts_path %>
           </div>
         </div>
       </div>
