@@ -1,12 +1,13 @@
 .navbar-lewagon {
   justify-content: space-around;
-  background: white;
+  background-color: white;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   padding: 0.4rem 0.5rem;
   position: fixed;
   top: 0;
   z-index: 100;
   width: 100%;
+  transition: all 0.5s ease;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -34,4 +35,9 @@
       flex-flow: row nowrap;
       justify-content: space-between;
   }
+}
+
+.navbar-lewagon-scrolled {
+  background-color: transparent !important;
+  transition: all 0.4s ease;
 }
