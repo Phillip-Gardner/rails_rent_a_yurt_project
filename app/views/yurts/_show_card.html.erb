@@ -1,7 +1,7 @@
 <div class="show-card">
   <div id="yurt-image">
     <% if @yurt.photo.attached? %>
-      <%= cl_image_tag yurt.photo.key, class:"yurt-image", height: 400, crop: :fill %>
+      <%= cl_image_tag yurt.photo.key, class:"yurt-image", crop: :fill %>
     <% else %>
       <p>No image attached</p>
     <% end %>
