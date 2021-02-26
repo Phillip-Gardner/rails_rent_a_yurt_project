@@ -27,10 +27,10 @@ title =
   "Kurt's Yurt",
   "Brent's Tent",
   "Stunning Teepee",
-  "Gorgeous Tent",
-  "Luxury Yurt with Stunning Views",
-  "Romantic Yurt with a bath",
   "Beautiful Venue in the Countryside",
+  "Romantic Yurt with a bath",
+  "Luxury Yurt with Stunning Views",
+
   ]
 description =
 ["We are delighted to offer our cosy yurt for holidays and events. Fully furnished and comfortable, it's particularly nice in the summer!",
