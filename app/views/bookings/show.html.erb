@@ -1,28 +1,30 @@
 <div class="booking-container">
-    <div class="booking-card col-6">
-      <h1 class="booking-header">Your booking</h1>
-      <% if @booking.yurt.photo.attached? %>
-        <%= cl_image_tag @booking.yurt.photo.key, crop: :fill %>
-      <% else %>
-        <p>No image attached</p>
-      <% end %>
-      <div class="booking-yurt-details">
-        <h2><%= @booking.yurt.title %></h2>
-        <div class="booking-yurt-description"><%= @booking.yurt.description %></div>
-        <p>Location: <%= @booking.yurt.location %></p>
-        <p>Price: £<%= @booking.yurt.day_rate %> / night</p>
-      </div>
-      <hr>
-      <h3>Your stay</h3>
-      <ul class="show-booking-details">
-        <li>From <strong><%= @booking.booked_from.strftime("%a %e %b %y") %></strong> to
-        <strong><%= @booking.booked_to.strftime("%a %e %b %y") %></strong></li>
-        <li>Nights: <%= @nights %></li>
-        <li>Total cost: £<%= @cost %></li>
-      </ul>
-      <hr>
-      <p><%= link_to 'Cancel this booking', booking_path(@booking.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-      <p><%= link_to 'Back', yurt_path(@booking.yurt_id) %></p>
+  <div class= "yurts-container">
+      <div class="booking-card col-6">
+        <h1 class="booking-header">Your booking</h1>
+        <% if @booking.yurt.photo.attached? %>
+          <%= cl_image_tag @booking.yurt.photo.key, crop: :fill %>
+        <% else %>
+          <p>No image attached</p>
+        <% end %>
+        <div class="booking-yurt-details">
+          <h2><%= @booking.yurt.title %></h2>
+          <div class="booking-yurt-description"><%= @booking.yurt.description %></div>
+          <p>Location: <%= @booking.yurt.location %></p>
+          <p>Price: £<%= @booking.yurt.day_rate %> / night</p>
+        </div>
+        <hr>
+        <h3>Your stay</h3>
+        <ul class="show-booking-details">
+          <li>From <strong><%= @booking.booked_from.strftime("%a %e %b %y") %></strong> to
+          <strong><%= @booking.booked_to.strftime("%a %e %b %y") %></strong></li>
+          <li>Nights: <%= @nights %></li>
+          <li>Total cost: £<%= @cost %></li>
+        </ul>
+        <hr>
+        <p><%= link_to 'Cancel this booking', booking_path(@booking.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to 'Back', yurt_path(@booking.yurt_id) %></p>
+    </div>
   </div>
 
   <div class="map-container col-6">
