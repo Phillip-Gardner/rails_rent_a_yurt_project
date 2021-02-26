@@ -1,6 +1,5 @@
 <div class="booking-container">
   <div class="booking-card">
-    <div class="booking-page">
       <h1 class="booking-header">Your booking</h1>
       <h2 class="booking-header"><%= @booking.yurt.title %></h2>
       <% if @booking.yurt.photo.attached? %>
@@ -18,6 +17,5 @@
 
       <%= link_to 'Cancel this booking', booking_path(@booking.id), method: :delete, data: { confirm: 'Are you sure?' } %>
       <p><%= link_to 'Back', yurt_path(@booking.yurt_id) %></p>
-    </div>
   </div>
 </div>
