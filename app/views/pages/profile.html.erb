@@ -1,17 +1,18 @@
 
-<div class="container">
+<div class="profile-container">
 
   <div>
     <div>
       <div class = "profile-page-header">
         <h3>Your Yurt Listings</h3>
       </div>
-      <div class="row">
+      <div class="profile-page-row">
         <% if @yurts.empty? %>
-          <%= link_to 'Become a host', new_yurt_path, class: "button"  %>
+          <p>You don't have any yurts listed.</p>
+          <%= link_to 'Become a host!', new_yurt_path, class: "button"  %>
         <% else %>
           <% @yurts.each do |yurt| %>
-            <div class="column">
+            <div class="profile-page-column">
               <div class="yurt-card-small">
                 <% if yurt.photo.attached? %>
                   <%= cl_image_tag yurt.photo.key, width: 240, height: 240, crop: :fill %>
@@ -43,7 +44,7 @@
       </div>
       <div>
         <div class="bookings">
-          <div class="row">
+          <div class="profile-page-row">
             <% if @bookings.empty? %>
               <div>
                 You have no bookings.
@@ -62,9 +63,9 @@
                     <div class="booking-card-info">
                       <h3><%= booking.yurt.title %></h3>
 
-                      <p>
+                      <div class="booking-dates">
                         <strong><%= booking.booked_from.strftime("%a %e %b %y") %></strong> to <strong><%= booking.booked_to.strftime("%a %e %b %y") %></strong>
-                      </p>
+                      </div>
                       <%= link_to 'View booking details', booking_path(booking.id), class: "button" %>
                     </div>
                   </div>
@@ -83,7 +84,7 @@
       <div class="profile-page-header">
         <h3>Your Details</h3>
       </div>
-      <div class = "container">
+      <div class = "details-container">
           <p>Email: <%= @user.email %></p>
           <p>First name: <%= @user.first_name %></p>
           <p>Last name: <%= @user.last_name %></p>
