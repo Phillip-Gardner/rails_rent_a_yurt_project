@@ -41,7 +41,7 @@ description =
   "Our fantastic yurt is great for intimate weddings. We can also provide food and entertainment, if required",
   "Our stunning teepee is perfect for a romantic getaway. A holiday to remember!",
   "Come and stay in our gorgeous yurt. Located on the edge of our farm, you will wake up to the sound of animals and the smell of the freshly-baked bread we deliver to your door"]
-location = ["Surrey", "Kent", "Yorkshire, England", "Devon", "Highlands",  "Cornwall", "Wiltshire", "Suffolk"]
+location = ["Surrey", "Canterbury, Kent", "Yorkshire, England", "Devon", "Fort William, Scotland",  "Cork, Cornwall", "Wiltshire", "Suffolk"]
 max_capacity = [30, 200, 50, 15, 8, 60, 200, 10 ]
 day_rate = [300, 2000, 400, 320, 120, 80, 100, 1200]
 # user_filenames = ['nicolas-horn-MTZTGvDsHFY-unsplash_xpfqge.jpg', 'ben-parker-NohB3FJSY90-unsplash_bgq5zz.jpg', 'ben-parker-OhKElOkQ3RE-unsplash_cbbhi5.jpg', 'luis-villasmil-6qf1uljGpU4-unsplash_xvyzar.jpg', 'sarah-brown-tTdC88_6a_I-unsplash_wkvvpl.jpg']

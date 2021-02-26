@@ -1,9 +1,9 @@
   <h2>Your yurt</h2>
-  <%= simple_form_for @yurt do |f| %>
+  <%= simple_form_for yurt do |f| %>
     <%= f.input :title, placeholder: 'e.g.: Pretty 10-man yurt'  %>
     <%= f.input :description, label: 'Description of your tent and its features' %>
     <%= f.input :photo, as: :file, label: 'Upload your photo' %>
-    <%= f.input :location, label: 'Where is it?', input_html: { id: 'yurt-location' } %>
+    <%= f.input :location, label: 'Where is it?' %>
     <%= f.input :max_capacity, label: 'How many people?' %>
     <%= f.input :day_rate, label: 'What is the price for one night?' %>
     <%= f.submit "List your yurt!", class: "button" %>
