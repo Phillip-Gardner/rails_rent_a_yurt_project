@@ -8,7 +8,7 @@
       <% end %>
       <div class="booking-yurt-details">
         <h2><%= @booking.yurt.title %></h2>
-        <p><%= @booking.yurt.description %></p>
+        <div class="booking-yurt-description"><%= @booking.yurt.description %></div>
         <p>Location: <%= @booking.yurt.location %></p>
         <p>Price: £<%= @booking.yurt.day_rate %> / night</p>
       </div>
@@ -21,7 +21,7 @@
         <li>Total cost: £<%= @cost %></li>
       </ul>
       <hr>
-      <%= link_to 'Cancel this booking', booking_path(@booking.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <p><%= link_to 'Cancel this booking', booking_path(@booking.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
       <p><%= link_to 'Back', yurt_path(@booking.yurt_id) %></p>
   </div>
 </div>
