@@ -8,7 +8,6 @@
       </div>
       <div class="profile-page-row">
         <% if @yurts.empty? %>
-          <p>You don't have any yurts listed.</p>
           <%= link_to 'Become a host!', new_yurt_path, class: "button"  %>
         <% else %>
           <% @yurts.each do |yurt| %>
@@ -47,7 +46,6 @@
           <div class="profile-page-row">
             <% if @bookings.empty? %>
               <div>
-                You have no bookings.
                 <%= link_to 'Find a yurt', yurts_path, class: "button"  %>
               </div>
             <% else %>
