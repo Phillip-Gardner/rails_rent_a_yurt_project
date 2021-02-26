@@ -23,6 +23,21 @@
 
 #map{
   position: sticky;
-  top:0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  top: 70px;
 }
+
+.map-container {
+  display:flex;
+
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.map {
+    // position: sticky;
+    // top: 100px;
+    padding: 0;
+  }
+
+

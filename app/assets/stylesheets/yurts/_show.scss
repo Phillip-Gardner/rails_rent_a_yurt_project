@@ -4,19 +4,14 @@
 .show-page {
   display:flex;
   justify-content: space-between;
-  margin-top: 20px;
 }
 
 // container for the yurt show card and the host details
-.yurt-container {
-  padding: 40px;
-
-}
 
 // show page container
 .show-card {
   background-color: #fff;
-  margin: 0 20px;
+  margin: 0px 0px 0px 0px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
@@ -37,7 +32,6 @@
   display: block;
   margin: 20px;
   padding: 20px;
-  padding-bottom: 40px;
 }
 .yurt-title{
   padding-bottom: 20px;
@@ -73,12 +67,16 @@
 
 .yurt-host-edit{
   display: block;
-  padding-left: 40px;
-  padding-top: 30px;
-  p{
-    font-size: 18px;
-    padding-left: 20px;
-  }
+  margin: 20px 0px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.edit-links {
+  display:flex;
+  justify-content: space-between;
+  padding: 0px 20px;
 }
 
 

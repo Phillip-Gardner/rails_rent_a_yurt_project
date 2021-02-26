@@ -14,7 +14,7 @@
 
 const initUpdateNavbarOnScroll = () => {
   $(window).scroll(function () {
-  if ($(window).scrollTop() >= 60) {
+  if ($(window).scrollTop() >= 40) {
   $('.navbar').css({'box-shadow':'0 0px 0px 0 rgba(0, 0, 0, 10)', 'background':'transparent'});
   } else {
   $('.navbar').css('background','white',);
