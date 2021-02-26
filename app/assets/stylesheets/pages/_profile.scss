@@ -12,10 +12,11 @@
 
 .profile-page-header {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .profile-page-column {
-  margin-left:20px;
+  margin-right: 20px;
 }
 
 .profile-page-row p {
@@ -27,5 +28,6 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 10px;
-  margin-left: 20px;
+  margin-right: 20px;
+  width: 300px;
 }
