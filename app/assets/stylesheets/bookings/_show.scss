@@ -5,7 +5,7 @@
   padding: 20px;
   border-radius: 5px;
   text-align: left;
-  margin: 40px auto;
+  margin: 40px 20px;
   max-width: 700px;
   background-color: #fff;
 }
@@ -20,8 +20,10 @@
 // giving the card space
 .booking-container {
   margin: 35px;
+  display: flex;
 }
 
+// only the header is center aligned
 .booking-header{
   text-align: center;
 }
@@ -36,12 +38,14 @@
   font-size: 10pt;
 }
 
+// removing list points and styling
 .booking-card ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+// adding some spacing underneath the description of the yurt
 .booking-yurt-description {
   margin-bottom: 5px;
 }

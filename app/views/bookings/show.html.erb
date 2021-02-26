@@ -1,5 +1,5 @@
 <div class="booking-container">
-  <div class="booking-card">
+    <div class="booking-card">
       <h1 class="booking-header">Your booking</h1>
       <% if @booking.yurt.photo.attached? %>
         <%= cl_image_tag @booking.yurt.photo.key, crop: :fill %>
@@ -23,5 +23,13 @@
       <hr>
       <p><%= link_to 'Cancel this booking', booking_path(@booking.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
       <p><%= link_to 'Back', yurt_path(@booking.yurt_id) %></p>
+  </div>
+
+  <div class="map-container">
+    <div id="map"
+      style="width: 100%; height: 100vh;"
+      data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
 </div>
