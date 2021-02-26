@@ -12,20 +12,15 @@
         <p>Location: <%= @booking.yurt.location %></p>
         <p>Price: £<%= @booking.yurt.day_rate %> / night</p>
       </div>
-
+      <hr>
       <h3>Your stay</h3>
-      <p>
-        From <strong><%= @booking.booked_from.strftime("%a %e %b %y") %></strong> to
-        <strong><%= @booking.booked_to.strftime("%a %e %b %y") %></strong>
-      </p>
-      <p>
-        Nights: <%= @nights %>
-      </p>
-      <p>
-        Total cost: £<%= @cost %>
-      </p>
-
-
+      <ul class="show-booking-details">
+        <li>From <strong><%= @booking.booked_from.strftime("%a %e %b %y") %></strong> to
+        <strong><%= @booking.booked_to.strftime("%a %e %b %y") %></strong></li>
+        <li>Nights: <%= @nights %></li>
+        <li>Total cost: £<%= @cost %></li>
+      </ul>
+      <hr>
       <%= link_to 'Cancel this booking', booking_path(@booking.id), method: :delete, data: { confirm: 'Are you sure?' } %>
       <p><%= link_to 'Back', yurt_path(@booking.yurt_id) %></p>
   </div>
