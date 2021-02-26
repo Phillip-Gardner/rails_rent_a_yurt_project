@@ -29,3 +29,24 @@ footer {
 .yield-container {
   padding-top: 70px;
 }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.footer-grid-element-1 {
+  display: grid;
+  grid-column: 1;
+}
+
+.footer-grid-element-2 {
+  display: grid;
+  grid-column: 2;
+}
+
+.footer-grid-element-3 {
+  display: grid;
+  grid-column: 3;
+}
