@@ -1,16 +1,18 @@
 <div class="booking-container">
   <div class="booking-card">
       <h1 class="booking-header">Your booking</h1>
-      <h2 class="booking-header"><%= @booking.yurt.title %></h2>
       <% if @booking.yurt.photo.attached? %>
         <%= cl_image_tag @booking.yurt.photo.key, crop: :fill %>
       <% else %>
         <p>No image attached</p>
       <% end %>
-      <p><%= @booking.yurt.description %></p>
-      <p>Location: <%= @booking.yurt.location %></p>
+      <div class="booking-yurt-details">
+        <h2><%= @booking.yurt.title %></h2>
+        <p><%= @booking.yurt.description %></p>
+        <p>Location: <%= @booking.yurt.location %></p>
+      </div>
       <p>
-        <strong><%= @booking.booked_from.strftime("%a %e %b %y") %></strong> to
+        From <strong><%= @booking.booked_from.strftime("%a %e %b %y") %></strong> to
         <strong><%= @booking.booked_to.strftime("%a %e %b %y") %></strong>
       </p>
 
