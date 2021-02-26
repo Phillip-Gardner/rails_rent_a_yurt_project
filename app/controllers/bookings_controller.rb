@@ -8,6 +8,9 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @yurt = @booking.yurt
+    @nights = (@booking.booked_to - @booking.booked_from).to_i
+    @cost = @nights * @yurt.day_rate
   end
 
   def edit

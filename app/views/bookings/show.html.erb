@@ -10,10 +10,19 @@
         <h2><%= @booking.yurt.title %></h2>
         <p><%= @booking.yurt.description %></p>
         <p>Location: <%= @booking.yurt.location %></p>
+        <p>Price: £<%= @booking.yurt.day_rate %> / night</p>
       </div>
+
+      <h3>Your stay</h3>
       <p>
         From <strong><%= @booking.booked_from.strftime("%a %e %b %y") %></strong> to
         <strong><%= @booking.booked_to.strftime("%a %e %b %y") %></strong>
+      </p>
+      <p>
+        Nights: <%= @nights %>
+      </p>
+      <p>
+        Total cost: £<%= @cost %>
       </p>
 
 
