@@ -3,7 +3,7 @@
 // container for everything on the page
 .show-page {
   display:flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 // container for the yurt show card and the host details
@@ -11,7 +11,7 @@
 // show page container
 .show-card {
   background-color: #fff;
-  margin: 0px 0px 0px 0px;
+  margin: 0px 40px 0px 0px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
@@ -35,10 +35,6 @@
 }
 .yurt-title{
   padding-bottom: 20px;
-}
-
-.yurt-title h2 {
-   font-weight: bold;
 }
 
   .capacity-cost{
@@ -67,7 +63,7 @@
 
 .yurt-host-edit{
   display: block;
-  margin: 20px 0px;
+  margin: 20px 40px 20px 0px;
   padding: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
