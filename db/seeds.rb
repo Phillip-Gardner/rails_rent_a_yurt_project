@@ -34,13 +34,13 @@ title =
   ]
 description =
 ["We are delighted to offer our cosy yurt for holidays and events. Fully furnished and comfortable, it's particularly nice in the summer!",
-  "I can guarantee you won't find a nicer Yurt in the South. Very popular for weddings, it can fit up to 200 guests",
-  "A stunning old yurt, hidden away in the countryside. Perfect for families",
-  "Cute yurt in our garden in Devon. Plenty of space, and lots of activities in the vicinity. We hope you enjoy your stay",
-  "Gorgeous tent in the highlands. Jaw-dropping views of the Scottish coastline. You will love the peace and quiet",
-  "Our fantastic yurt is great for intimate weddings. We can also provide food and entertainment, if required",
+  "I can guarantee you won't find a nicer Yurt in the South. Very popular for weddings, it can fit up to 200 guests.",
+  "A stunning old yurt, hidden away in the countryside. Perfect for families.",
+  "Cute yurt in our garden in Devon. Plenty of space, and lots of activities in the vicinity. We hope you enjoy your stay.",
+  "Gorgeous tent in the highlands. Jaw-dropping views of the Scottish coastline. You will love the peace and quiet.",
+  "Our fantastic yurt is great for intimate weddings. We can also provide food and entertainment, if required.",
   "Our stunning teepee is perfect for a romantic getaway. A holiday to remember!",
-  "Come and stay in our gorgeous yurt. Located on the edge of our farm, you will wake up to the sound of animals and the smell of the freshly-baked bread we deliver to your door"]
+  "Come and stay in our gorgeous yurt. Located on the edge of our farm, you will wake up to the sound of animals and the smell of the freshly-baked bread we deliver to your door."]
 location = ["Shepperton Surrey", "Canterbury, Kent", "Yorkshire, England", "Salcombe, Devon", "Fort William, Scotland",  "Rock, Cornwall", "Salisbury, Wiltshire", "Bury St Edmunds, Suffolk"]
 max_capacity = [30, 200, 50, 15, 8, 60, 200, 10 ]
 day_rate = [300, 2000, 400, 320, 120, 80, 100, 1200]

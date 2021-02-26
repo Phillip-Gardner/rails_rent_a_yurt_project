@@ -15,7 +15,7 @@
               <div class="yurt-card-body">
                 <h5 class="card-title"><%= yurt.title %></h5>
                 <div class="card-location"><%= yurt.location %></div>
-                <div class="card-description"><%= yurt.description %></div>
+                <div class="card-description"><%= yurt.description.truncate(120, separator: ' ') %></div>
                 <div class="detailsholder">
                   <div class="yurt-details">
                     <div class="card-text">Max Capacity: <%= yurt.max_capacity %></div>
