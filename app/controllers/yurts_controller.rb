@@ -8,7 +8,7 @@ class YurtsController < ApplicationController
       {
         lat: yurt.latitude,
         lng: yurt.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { yurt: yurt }),
+        infoWindow: render_to_string(partial: "info_window", locals: { yurt: yurt }, height: 100, width: 150),
         image_url: helpers.asset_url('image.png')
       }
     end
@@ -18,7 +18,7 @@ class YurtsController < ApplicationController
     @markers = [{
       lat: @yurt.latitude,
       lng: @yurt.longitude,
-      infoWindow: render_to_string(partial: "info_window", locals: { yurt: @yurt }),
+      infoWindow: render_to_string(partial: "info_window", locals: { yurt: @yurt }, height:100, width: 150),
       image_url: helpers.asset_url('image.png')
     }]
   end

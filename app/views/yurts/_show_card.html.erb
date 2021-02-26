@@ -1,0 +1,27 @@
+<div class="show-card">
+  <div id="yurt-image">
+    <% if @yurt.photo.attached? %>
+      <%= cl_image_tag yurt.photo.key, class:"yurt-image", height: 400, crop: :fill %>
+    <% else %>
+      <p>No image attached</p>
+    <% end %>
+  </div>
+  <div class="yurt-card-text">
+    <div class="yurt-title"><h2><%= yurt.title %></h2></div>
+    <div id="yurt-info">
+      <div class="location"><p><%= yurt.location %></p></div>
+      <div class="description"><%= yurt.description %></div>
+      <div class="capacity-cost">
+        <div class="capacity"><p>Max Capacity: <%= yurt.max_capacity %></p></div>
+        <div class="day-rate"><p>Day rate: £<%= yurt.day_rate %></p></div>
+      </div>
+
+      <div class="host-email"><p>Host: <%= yurt.user.email %></p></div>
+    </div>
+
+    <div class="show-links">
+     <%= link_to 'Book this yurt', new_yurt_booking_path(yurt), class:"button" %>
+    <%= link_to 'Back to yurts', yurts_path %>
+    </div>
+  </div>
+</div>
