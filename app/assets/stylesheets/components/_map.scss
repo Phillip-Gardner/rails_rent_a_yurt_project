@@ -29,7 +29,10 @@
 #map{
   position: sticky;
   top: 70px;
+  border-radius: 5px;
 }
+
+*:focus { outline: none; }
 
 .map-container {
   display:flex;
