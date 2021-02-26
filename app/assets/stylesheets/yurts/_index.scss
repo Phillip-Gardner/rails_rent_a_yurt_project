@@ -53,6 +53,7 @@
   display: block;
   justify-content: flex-start;
   padding: 10px;
+  overflow: hidden;
   .card-title{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -65,6 +66,7 @@
   .card-description{
     margin-bottom: 20px;
     height: 60px;
+    font-size: 14px;
   }
 }
 
