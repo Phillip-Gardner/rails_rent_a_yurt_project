@@ -1,9 +1,14 @@
 .mapboxgl-popup {
-  max-width: 200px;
+  max-width: 100px;
+  max-height: 100px;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
+  position: cover;
+  h4{
+    font-size: 14px;
+  }
 }
 
 .map-container{
