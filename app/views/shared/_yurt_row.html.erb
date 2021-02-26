@@ -10,7 +10,7 @@
           <% end %>
 
           <div class="yurt-card-info">
-            <h3><%= yurt.title %></h3>
+            <h3><%= yurt.title.truncate(20) %></h3>
             Sleeps <%= yurt.max_capacity %>
             <div class="yurt-card-info-inline">
               £<%= yurt.day_rate %> / night
