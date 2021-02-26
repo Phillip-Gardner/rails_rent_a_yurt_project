@@ -1,25 +1,52 @@
+// giving the card space
+.booking-container {
+  margin: 35px 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+}
+
 // booking card style
 .booking-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 400px;
-  margin: auto;
-  text-align: center;
   display: block;
   padding: 20px;
   border-radius: 5px;
   text-align: left;
+  max-width: 900px;
+  background-color: #fff;
 }
 
 .booking-card img {
   width:100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
-// giving the card space
-.booking-container {
-  margin: 35px;
-}
-
+// only the header is center aligned
 .booking-header{
   text-align: center;
 }
 
+.booking-yurt-details {
+  margin-top: 10px;
+}
+
+.booking-card p {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 10pt;
+}
+
+// removing list points and styling
+.booking-card ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+// adding some spacing underneath the description of the yurt
+.booking-yurt-description {
+  margin-bottom: 5px;
+}

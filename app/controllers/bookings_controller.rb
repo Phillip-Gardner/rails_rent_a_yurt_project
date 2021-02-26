@@ -8,6 +8,16 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @yurt = @booking.yurt
+    @nights = (@booking.booked_to - @booking.booked_from).to_i
+    @cost = @nights * @yurt.day_rate
+
+    @markers = [{
+      lat: @yurt.latitude,
+      lng: @yurt.longitude,
+      infoWindow: render_to_string(partial: "yurts/info_window", locals: { yurt: @yurt }),
+      image_url: helpers.asset_url('image.png')
+    }]
   end
 
   def edit
