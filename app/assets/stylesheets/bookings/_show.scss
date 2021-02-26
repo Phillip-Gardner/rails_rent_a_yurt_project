@@ -1,6 +1,5 @@
 // giving the card space
 .booking-container {
-  margin: 35px 40px;
   display: flex;
   justify-content: space-around;
   align-items: top;
@@ -15,6 +14,7 @@
   text-align: left;
   max-width: 900px;
   background-color: #fff;
+  margin-right: 40px;
 }
 
 // only the header is center aligned

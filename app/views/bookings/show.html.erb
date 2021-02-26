@@ -1,4 +1,5 @@
 <div class="booking-container">
+  <div class= "yurts-container">
     <div class="booking-card col-6">
       <h1 class="booking-header">Your booking</h1>
       <% if @booking.yurt.photo.attached? %>
@@ -23,6 +24,7 @@
       <hr>
       <p><%= link_to 'Cancel this booking', booking_path(@booking.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
       <p><%= link_to 'Back', yurt_path(@booking.yurt_id) %></p>
+    </div>
   </div>
 
   <div class="map-container col-6">
