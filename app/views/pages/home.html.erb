@@ -5,19 +5,20 @@
 <!--       <p>Experience the best yurts in the world</p> -->
       <p><span id="banner-typed-text"></span></p>
       <%= link_to 'Find a yurt', yurts_path, class: "button" %>
-      <%= link_to 'Host your yurt', new_user_registration_path, class: "button" %>
+      <% if user_signed_in? %>
+      <%= link_to 'Your profile', profile_path, class: "button" %>
+      <% else %>
+      <%= link_to 'Become a host', new_user_registration_path, class: "button" %>
+      <% end %>
     </div>
   </div>
 </div>
 
+<div class="subheading-text">
+    <h3>Featured Yurts</h3>
+</div>
 <!-- carousel -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Carousel indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
     <!-- Wrapper for carousel items -->
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -32,17 +33,14 @@
     </div>
     <!-- Carousel controls -->
     <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
+        <i class="fas fa-chevron-left arrow"></i>
     </a>
     <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
+        <i class="fas fa-chevron-right arrow"></i>
     </a>
 </div>
 <!-- carousel -->
 
-<div class="subheading-text">
-    <h3>Featured Yurts</h3>
-</div>
 
 
 
