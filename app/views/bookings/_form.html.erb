@@ -1,11 +1,13 @@
-<h2>Book <%= yurt.title %></h2>
+<h2>Book your yurt experience</h2>
 
 <% if yurt.photo.attached? %>
   <%= cl_image_tag yurt.photo.key, height: 400, width: 600, crop: :fill %>
 <% end %>
-
+<h3><%= yurt.title %></h3>
+<div class="form-yurt-description"><%= yurt.description %></div>
+<p><%= yurt.location %></p>
 <p>Price per night: <strong>£<%= yurt.day_rate %></strong></p>
-
+<hr>
 <%= simple_form_for [yurt, booking] do |f| %>
   <%= f.input :booked_from, as: :date, html5: true, label: 'From' %>
   <%= f.input :booked_to, as: :date, html5: true, label: 'To' %>
