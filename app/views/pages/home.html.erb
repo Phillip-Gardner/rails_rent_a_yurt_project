@@ -5,7 +5,11 @@
 <!--       <p>Experience the best yurts in the world</p> -->
       <p><span id="banner-typed-text"></span></p>
       <%= link_to 'Find a yurt', yurts_path, class: "button" %>
-      <%= link_to 'Host your yurt', new_user_registration_path, class: "button" %>
+      <% if user_signed_in? %>
+      <%= link_to 'Your profile', profile_path, class: "button" %>
+      <% else %>
+      <%= link_to 'Become a host', new_user_registration_path, class: "button" %>
+      <% end %>
     </div>
   </div>
 </div>
