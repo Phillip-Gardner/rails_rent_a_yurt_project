@@ -28,7 +28,7 @@ title =
   "Brent's Tent",
   "Stunning Teepee",
   "Beautiful Venue in the Countryside",
-  "Romantic Yurt with a bath",
+  "Romantic Yurt",
   "Luxury Yurt with Stunning Views",
 
   ]
