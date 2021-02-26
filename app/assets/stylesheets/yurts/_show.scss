@@ -4,7 +4,7 @@
 .show-page {
   display:flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 // container for the yurt show card and the host details
@@ -75,6 +75,10 @@
   display: block;
   padding-left: 40px;
   padding-top: 30px;
+  p{
+    font-size: 18px;
+    padding-left: 20px;
+  }
 }
 
 

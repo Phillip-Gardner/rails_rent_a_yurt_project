@@ -2,47 +2,27 @@
 
 
   <div class="yurt-container col-6">
-      <div class="show-card">
-        <div id="yurt-image">
-          <% if @yurt.photo.attached? %>
-            <%= cl_image_tag @yurt.photo.key, class:"yurt-image", height: 400, crop: :fill %>
-          <% else %>
-            <p>No image attached</p>
-          <% end %>
-        </div>
-        <div class="yurt-card-text">
-          <div class="yurt-title"><h2><%= @yurt.title %></h2></div>
-          <div id="yurt-info">
-            <div class="location"><p><%= @yurt.location %></p></div>
-            <div class="description"><%= @yurt.description %></div>
-            <div class="capacity-cost">
-              <div class="capacity"><p>Max Capacity: <%= @yurt.max_capacity %></p></div>
-              <div class="day-rate"><p>Day rate: £<%= @yurt.day_rate %></p></div>
+     <%= render 'show_card', yurt: @yurt %>
+
+      <% if current_user == @yurt.user %>
+        <div class="yurt-host-edit">
+          <div class="edit-links">
+            <h5>Yurt Host actions:</h5>
+            <div class="yurt-edit">
+              <%= link_to edit_yurt_path @yurt do %>
+                Update yurt details <i class="fas fa-edit"></i>
+              <% end %>
             </div>
-
-            <div class="host-email"><p>Host: <%= @yurt.user.email %></p></div>
-          </div>
-
-          <div class="show-links">
-           <%= link_to 'Book this yurt', new_yurt_booking_path(@yurt), class:"button" %>
-          <%= link_to 'Back to yurts', yurts_path %>
+            <div class="yurt-delete">
+              <%= link_to 'Delete your yurt', yurt_path(@yurt.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="yurt-host-edit">
-        <div class="edit-links">
-          <h5>Yurt Host actions:</h5>
-          <div class="yurt-edit">
-            <%= link_to edit_yurt_path @yurt do %>
-              Update yurt details <i class="fas fa-edit"></i>
-            <% end %>
-          </div>
-          <div class="yurt-delete">
-            <%= link_to 'Delete your yurt', yurt_path(@yurt.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-          </div>
+      <% else %>
+        <div class="yurt-host-edit">
+          <p>Please contact the host for more information about this yurt.</p>
         </div>
-    </div>
+      <% end %>
   </div>
 
   <div class="map-container">
